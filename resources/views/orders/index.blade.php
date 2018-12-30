@@ -16,7 +16,55 @@
         </div>
 
         <div id="body">
-            <section class="container mt-4">
+
+            <section class="container">
+                <div class="row mt-2">
+                    <div class="col-md-12 ">
+                        <nav class="navbar navbar-light bg-light justify-content-between">
+                          <a class="navbar-brand">Pesanan Cetak</a>
+                          <form class="form-inline float-left">
+                            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+                          </form>
+                        </nav>
+                    </div>
+                </div>
+
+                <div class="row mt-2">
+
+                    <div class="card w-100 mt-1">
+                        <div class="card-body">
+                            <div class="row col-md-12" style="padding-left: 0px; padding-right: 0px">
+                                <div class="col-md-2" align="center" style="padding-left: 0px">
+                                    <img src="https://via.placeholder.com/150x150">
+                                </div>
+                                <div class="col-md-7">
+                                    <h3>Pesanan</h3>
+                                    <p style="margin-bottom: 1px">Total Cetak</p>
+                                    <p>Pesan</p>
+                                </div>
+                                <div class="col-md-3" style="padding-right: 0px">
+                                    <div class="float-right" align="center">
+                                        <div>
+                                            <h5 style="margin-bottom: 0px">Total Biaya</h5>
+                                            <label>Rp.100.000</label>
+                                        </div>
+                                        <div class="row">
+                                            <div style="padding-right: 10px">
+                                                <a href="" class="btn btn-success" style="width: 100px">Terima</a>
+                                            </div>
+                                            <div>
+                                                <a href="" class="btn btn-danger" style="width: 100px">Tolak</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            <!-- <section class="container mt-4">
                 <table class="table">
                     <thead>
                         <tr>
@@ -38,7 +86,7 @@
                         </tr>
                     </tbody>
                     </table>
-            </section>
+            </section> -->
         </div>
         <div id="footer">
             @include('partials.footer-percetakan')

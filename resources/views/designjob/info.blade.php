@@ -26,7 +26,7 @@
 				</div>
 
 				<div class="card">
-					<h5 class="card-header">Featured</h5>
+					<h5 class="card-header">Bidder</h5>
 					<div class="card-body">
 						<div>
 							<h3>Bider satu</h3>

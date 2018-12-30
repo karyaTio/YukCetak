@@ -30,7 +30,7 @@
             <div class="col-md-3 banner-img-container">
                 <img class="img-fluid banner-img img-thumbnail" src="https://via.placeholder.com/200x200" alt="">
             </div>
-            <div class="col-md-8">
+            <div class="col-md-6">
                 <h3>Nama Percetakan</h3>
                 <p style="margin-bottom: 4px">percetakan@gmail.com</p>
                 <div class="star">
@@ -41,8 +41,8 @@
                     <i class="fa fa-star-half"></i>
                 </div>
             </div>
-            <div class="col-md-1 pt-1">
-                <a href="" class="btn btn-primary btn-lg">Chat</a>
+            <div class="col-md-3 pt-4">
+                <a href="" class="btn btn-primary">Kirim Pesan</a>
             </div>
         </div>
     </div>
