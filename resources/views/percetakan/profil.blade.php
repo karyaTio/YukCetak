@@ -60,7 +60,6 @@
                           <tr>
                           <th scope="col">No</th>
                           <th scope="col">Nama</th>
-                          <th scope="col">Harga</th>
                           <th scope="col">Deskripsi</th>
                           <th scope="col">Aksi</th>
                           </tr>
@@ -71,7 +70,6 @@
                               <tr>
                                   <th scope="row">{{$index+1}}</th>
                                   <th>{{$service->name}}</th>
-                                  <td>{{$service->price}}</td>
                                   <td>{{$service->description}}</td>
                                   <td>
                                       <button class="btn btn-info">Info</button>
@@ -96,15 +94,15 @@
 
     <div class="modal fade" tabindex="-1" role="dialog" id="modal_hapus_service">
         <div class="modal-dialog" role="document">
-          <div class="modal-content">
+            <div class="modal-content">
             <div class="modal-header">
-              <h5 class="modal-title">Hapus Layanan ? </h5>
-              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <h5 class="modal-title">Hapus Layanan ? </h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                 <span aria-hidden="true">&times;</span>
-              </button>
+                </button>
             </div>
             <div class="modal-body">
-              <p>Anda yakin ingin menghapus layanan ini ? </p>
+                <p>Anda yakin ingin menghapus layanan ini ? </p>
             </div>
             <div class="modal-footer">
                 <form action="{{url('/percetakan/services/delete')}}" method="post">
@@ -114,9 +112,9 @@
                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Batal</button>
                 </form>
             </div>
-          </div>
+            </div>
         </div>
-      </div>
+    </div>
 
     @include('partials.footer-percetakan')
 

@@ -21,12 +21,10 @@ class ServicesController extends Controller
 
     public function show($id){
         $service = Service::find($id);
-
-        $sizes = $service->sizes()->get();
-
         $percetakan = $service->percetakan()->first();
+        $packets = $service->packets()->get();
 
-        return view('services/show')->with(compact('service', 'sizes', 'percetakan'));
+        return view('services/show')->with(compact('service', 'percetakan', 'packets'));
     }
 
     public function create()

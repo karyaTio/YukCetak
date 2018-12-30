@@ -6,7 +6,7 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
         <li class="nav-item active">
-            <a class="nav-link" href="{{ url('/percetakan/dashboard') }}">Home<span class="sr-only"></span></a>
+            <a class="nav-link" href="{{ url('/percetakan/profil') }}/{{ Auth::user()->id }}">Home<span class="sr-only"></span></a>
         </li>
         @if (Auth::user()->id)
         <li class="nav-item">
@@ -20,7 +20,7 @@
     <ul class="navbar-nav ml-auto">
         @if (Auth::user()->id)
             <li class="nav-item" style="padding-right: 80px">
-                <a class="nav-link" href="{{ url('/percetakan/profil') }}/{{ Auth::user()->id }}">Profil</a>
+                <a class="nav-link" href="{{ url('/percetakan/logout') }}">Logout</a>
             </li>
         @else
             <li class="nav-item">

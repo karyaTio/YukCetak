@@ -21,7 +21,7 @@ class Percetakan extends Authenticatable
      *
      * @var array
      */
-    protected $fillable = ["name", "email", "password"];
+    protected $fillable = ["name", "email", "password", "phone_number", "address"];
 
     /**
      * The attributes that should be hidden for arrays.

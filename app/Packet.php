@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Packet extends Model
 {
-    protected $fillable = ["measurement", "height", "width", "material", "price"];
+    protected $fillable = ["service_id", "quantity","name" ,"price"];
     
     public function services(){
         return $this->belongsTo('App\Service');

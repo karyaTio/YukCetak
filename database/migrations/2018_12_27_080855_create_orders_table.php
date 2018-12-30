@@ -17,10 +17,11 @@ class CreateOrdersTable extends Migration
             $table->increments('id');
             $table->integer('user_id');
             $table->integer('percetakan_id');
-            $table->integer('service_id');
-            $table->integer('size_id');
-            $table->string('delivery_method')->default("undecided");
-            $table->string('payment_method')->default("undecided");
+            $table->integer('packet_id');
+            $table->integer('quantity');
+            $table->string('delivery_method');
+            $table->string('payment_method');
+            $table->string('message');
             $table->string('status')->default("pending");
             $table->integer('rating')->default("-1");
             $table->string('attachment');

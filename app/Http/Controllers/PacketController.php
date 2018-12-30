@@ -27,14 +27,27 @@ class PacketController extends Controller
     }
 
     public function create($id){
+        $service = Service::find($id);
+        return view('packets.create')->with(compact('service'));
+    }
+
+    public function store($id){
+
         Packet::create([
-            'measurement' => request()->measurement,
-            'width' => request()->width,
-            'height' => request()->height,
+            'service_id' => $id,
+            'name' => request()->name,
+            'quantity' => request()->quantity,
             'price' => request()->price,
-            'material' => request()->material,
         ]);
 
         return redirect('/percetakan/services/'. $id.'/packets/');
+    }
+
+    public function destroy(){
+        $packet = Packet::find(request()->id_hapus);
+
+        $packet->delete();
+
+        return back();
     }
 }

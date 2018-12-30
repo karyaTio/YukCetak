@@ -16,12 +16,10 @@ class CreatePacketsTable extends Migration
         Schema::create('packets', function (Blueprint $table) {
             $table->increments('id');
             $table->integer('service_id');
+            $table->string('name');
             $table->string('quantity');
-            $table->string('measurement');
-            $table->integer('width');
-            $table->integer('height');
             $table->integer('price');
-            $table->string('material');
+            $table->integer('rating')->default(5);
             $table->timestamps();
         });
     }

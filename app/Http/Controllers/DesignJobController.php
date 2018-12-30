@@ -30,11 +30,13 @@ class DesignJobController extends Controller
         $percetakanId = request()->user()->id();
         $percetakan = Percetakan::find($percetakanId);
 
+        $path = request()->file('attachment')->store('jobdesign');
+
         $services = $percetakan->designjob()->create([
             'title' => request()->title,
             'description' => request()->description,
             'budget' => request()->budget,
-            'attachment' => "temporary",
+            'attachment' => $path,
             'deadline' => request()->deadline
         ]);
 

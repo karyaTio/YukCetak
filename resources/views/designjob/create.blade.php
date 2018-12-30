@@ -16,7 +16,7 @@
 				<div class="row">
 						<div class="col-md-7 mr-5 ml-5">
 					<h1 style="color: #25e9fd; margin-bottom: 20px">YukCetak!<span class="text-desainer">Job</span></h1>
-					<form method="POST" action="{{ url('percetakan/design') }}">
+					<form method="POST" action="{{ url('percetakan/design') }}" enctype="multipart/form-data">
 					@csrf
 					<div class="form-group">
 						<label>Judul</label>
@@ -30,7 +30,7 @@
 						<label>File Attachment</label>
 						<div class="card">
 						<div class="card-body">
-							<input type="file" class="form-control-file" id="exampleFormControlFile1">
+							<input type="file" name="attachment" class="form-control-file">
 						</div>
 						</div>
 					</div>

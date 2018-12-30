@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreatePercetakansTable extends Migration
+class CreateBiddersTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,14 +13,10 @@ class CreatePercetakansTable extends Migration
      */
     public function up()
     {
-        Schema::create('percetakan', function (Blueprint $table) {
+        Schema::create('bidders', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('email')->unique();
-            $table->string('name');
-            $table->string('password');
-            $table->string('phone_number');
-            $table->string('address');
-            $table->rememberToken();
+            $table->integer('user_id');
+            $table->integer('designjob_id');
             $table->timestamps();
         });
     }
@@ -32,6 +28,6 @@ class CreatePercetakansTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('percetakan');
+        Schema::dropIfExists('bidders');
     }
 }

@@ -28,7 +28,7 @@ class PercetakanRegisterController extends Controller
      *
      * @var string
      */
-    protected $redirectTo = '/percetakan/dashboard';
+    protected $redirectTo = '/percetakan/login';
 
     /**
      * Create a new controller instance.
@@ -52,6 +52,8 @@ class PercetakanRegisterController extends Controller
             'name' => ['required', 'string', 'max:255'],
             'email' => ['required', 'string', 'email', 'max:255', 'unique:percetakan'],
             'password' => ['required', 'string', 'min:6', 'confirmed'],
+            'phone_number' => ['required', 'string', 'max:255'],
+            'address' => ['required', 'string', 'max:255'],
         ]);
     }
 
@@ -67,6 +69,8 @@ class PercetakanRegisterController extends Controller
             'name' => $data['name'],
             'email' => $data['email'],
             'password' => Hash::make($data['password']),
+            'phone_number' => $data['phone_number'],
+            'address' => $data['address']
         ]);
     }
 

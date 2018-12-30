@@ -22,9 +22,13 @@ Route::get('/landing-page', 'PagesController@designerLandingPage');
 Route::get('/home-percetakan', 'PagesController@homePercetakan' )->name('home.percetakan');
 Route::get('/job-desain', 'DesignJobController@showAvailable');
 Route::get('/job-desain/{id}', 'DesignJobController@showDetail');
-Route::get('/desainer/profil/{id}', 'DesignerController@show');
-Route::get('/desainer/percetakan/{id}', 'PercetakanController@show');
-Route::get('/desainer/percetakan/services/{id}', 'ServicesController@show');
+
+Route::prefix('/desainer')->group(function () {
+    Route::get('/profil/{id}', 'DesignerController@show');
+    Route::get('/percetakan/{id}', 'PercetakanController@show');
+    Route::get('/percetakan/services/{id}', 'ServicesController@show');
+});
+
 
 
 Route::prefix('/percetakan')->group(function () {
@@ -45,6 +49,8 @@ Route::prefix('/percetakan')->group(function () {
     Route::get('/services/{id}/edit', 'ServicesController@edit');
     Route::get('/services/{id}/packets', 'PacketController@index');
     Route::get('/services/{id}/packets/create', 'PacketController@create');
+    Route::post('/services/{id}/packets', 'PacketController@store');
+    Route::post('/services/packets/delete', 'PacketController@destroy');
 
     Route::get('/design', 'DesignJobController@index')->name('percetakan.design');
     Route::get('/design/create', 'DesignJobController@create')->name('percetakan.design.create');

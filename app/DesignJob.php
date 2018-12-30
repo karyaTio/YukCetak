@@ -14,6 +14,11 @@ class DesignJob extends Model
     protected $fillable = ["title", "description", "budget", "attachment", "deadline"];
 
     public function percetakan(){
-        $this->belongsTo('App\Percetakan');
+        return $this->belongsTo('App\Percetakan');
     }
+
+    public function bidders(){
+        return $this->hasMany('App\Bidder');
+    }
+
 }

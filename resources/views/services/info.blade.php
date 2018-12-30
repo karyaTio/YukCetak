@@ -43,19 +43,52 @@
                     </div>
                     <div class="pt-4">
                         <div class="row">
-                            <form action="">
-
+                            <div class="col-md-6">
                                 <div class="form-group">
-                                    <p>
-                                        <button type="button" class="btn btn-outline-primary"><i class="fa fa-thumbs-up"></i></button>
-                                        <button type="submit" class="btn btn-outline-primary">Pesan</button>
-                                    </p>
+                                    <label>Ukuran cetak</label>
+                                    <select class="form-control" id="exampleFormControlSelect1" style="width: 200px">
+                                        @foreach ($sizes as $size)
+                                            <option value="{{$size->id}}">{{$size->width}} X {{$size->height}}</option>
+                                        @endforeach
+                                    </select>
                                 </div>
-                            </form>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label>Jumlah cetak</label>
+                                    <input type="number" class="form-control" name="Jumlahcetak" style="width: 100px">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label>Upload desain</label>
+                                    <input type="file" class="form-control-file" id="exampleFormControlFile1">
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label>Total biaya</label>
+                                    <h3>Rp.xxx.xxx</h3>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="pt-1">
+                        <div class="row">
+                            <div style="padding: 5px">
+                                <button type="button" class="btn btn-outline-primary"><i class="fa fa-thumbs-up"></i></button>
+                            </div>
+                            <div style="padding: 5px">
+                                <button type="button" class="btn btn-outline-primary">Pesan tambahan</button>
+                            </div>
+                            <div style="padding: 5px">
+                                <button type="button" class="btn btn-primary">Order</button>
+                            </div>
                         </div>
                     </div>
                 </div>
-
                 <div class="col-md-2">
                     <div class="card">
                       <img class="card-img-top" src="https://via.placeholder.com/100x100" alt="Card image cap" style="padding: 20px; padding-bottom: 0px">
@@ -68,38 +101,6 @@
                       </div>
                     </div>
                 </div>
-            </div>
-        </div>
-
-        <br>
-
-        <div class="row">
-            <div class="col-md-4">
-
-            </div>
-            <div class="col-md-8">
-                <table class="table">
-                    <thead>
-                        <tr>
-                        <th scope="col">#</th>
-                        <th scope="col">Nama</th>
-                        <th scope="col">Jumlah</th>
-                        <th scope="col">Harga</th>
-                        <th scope="col">Rating</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        @foreach($packets as $index => $packet)
-                        <tr>
-                            <th scope="row">{{$index+1}}</th>
-                            <th>paket {{$packet->name}}</th>
-                            <th>jumlah {{$packet->quantity}}</th>
-                            <td>mulai dari Rp.{{$packet->price}}</td>
-                            <td>{{$packet->rating}}</td>
-                        </tr>
-                        @endforeach
-                    </tbody>
-                </table>
             </div>
         </div>
     </section>

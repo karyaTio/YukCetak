@@ -27,15 +27,17 @@
                         </tr>
                     </thead>
                     <tbody>
+                        @foreach($orders as $index => $order)
                         <tr>
-                            <td>1</td>
-                            <td>Banner</td>
-                            <td>Buat banner ini</td>
+                            <th scope="row">{{$index+1}}</th>
+                            <th>{{$order->delivery_method}}</th>
+                            <td>{{$order->payment_method}}</td>
+                            <td>{{$order->status}}</td>
                             <td>
-                                <button class="btn btn-success">Terima</button>
-                                <button class="btn btn-danger">Tolak</button>
+                                <button type="button" class="btn btn-info" data-id="{{ $order->id }}">Detail</button>
                             </td>
                         </tr>
+                        @endforeach
                     </tbody>
                     </table>
             </section>

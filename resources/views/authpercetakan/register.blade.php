@@ -55,10 +55,10 @@
                         <input id="password-confirm" type="password" class="form-control" name="password_confirmation" placeholder="Password Confirmation" required>
                       </div>
                       <div class="form-group">
-                        <input type="number" class="form-control" name="number" placeholder="contoh : 089768....">
+                        <input type="number" class="form-control" name="phone_number" placeholder="contoh : 089768....">
                       </div>
                       <div class="form-group">
-                        <textarea class="form-control" style="width: 100%;" placeholder="Alamat"></textarea>
+                        <textarea class="form-control" style="width: 100%;" name="address" placeholder="Alamat"></textarea>
                       </div>
                       <div class="text-center">
                             <button type="submit" class="btn btn-primary">
