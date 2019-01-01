@@ -21,4 +21,8 @@ class Service extends Model
     public function packets(){
         return $this->hasMany('App\Packet');
     }
+
+    public function orders(){
+        return $this->hasMany('App\Order');
+    }
 }

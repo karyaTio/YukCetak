@@ -28,6 +28,7 @@ Route::prefix('/desainer')->group(function () {
     Route::get('/profil/{id}', 'DesignerController@show');
     Route::get('/percetakan/{id}', 'PercetakanController@show');
     Route::get('/percetakan/services/{id}', 'ServicesController@show');
+    Route::post('/percetakan/services/{id}/orders', 'OrdersDesignerController@store');
 });
 
 

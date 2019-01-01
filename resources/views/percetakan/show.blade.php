@@ -13,6 +13,8 @@
   display: grid;
   grid-template-columns: 25% 25% 25% 25%;
   padding: 10px;
+  column-gap: 20px;
+  grid-row-gap: 20px;
 }
 </style>
 <body>
@@ -30,7 +32,7 @@
             <div class="col-md-3 banner-img-container">
                 <img class="img-fluid banner-img img-thumbnail" src="https://via.placeholder.com/200x200" alt="">
             </div>
-            <div class="col-md-8">
+            <div class="col-md-6">
                 <h3>Nama Percetakan</h3>
                 <p style="margin-bottom: 4px">percetakan@gmail.com</p>
                 <div class="star">
@@ -41,8 +43,8 @@
                     <i class="fa fa-star-half"></i>
                 </div>
             </div>
-            <div class="col-md-1 pt-1">
-                <a href="" class="btn btn-primary btn-lg">Chat</a>
+            <div class="col-md-3 pt-4">
+                <a href="" class="btn btn-primary">Kirim Pesan</a>
             </div>
         </div>
     </div>
@@ -68,6 +70,66 @@
     
     <section class="container">
         <div class="grid-container">
+            @foreach ($services as $service)
+            <div class="card">
+                <img class="card-img-top img-fluid" src="https://via.placeholder.com/300x200" alt="Card image cap">
+                <div class="card-body">
+                    <h5 class="card-title">{{$service->name}}</h5>
+                    <p class="card-text">{{$service->price}}</p>
+                    <a href="{{ url('/desainer/percetakan/services/'.$service->id) }}" class="btn btn-primary btn-block">Pesan</a>
+                </div>
+            </div>
+            @endforeach
+            @foreach ($services as $service)
+            <div class="card">
+                <img class="card-img-top img-fluid" src="https://via.placeholder.com/300x200" alt="Card image cap">
+                <div class="card-body">
+                    <h5 class="card-title">{{$service->name}}</h5>
+                    <p class="card-text">{{$service->price}}</p>
+                    <a href="{{ url('/desainer/percetakan/services/'.$service->id) }}" class="btn btn-primary btn-block">Pesan</a>
+                </div>
+            </div>
+            @endforeach
+            @foreach ($services as $service)
+            <div class="card">
+                <img class="card-img-top img-fluid" src="https://via.placeholder.com/300x200" alt="Card image cap">
+                <div class="card-body">
+                    <h5 class="card-title">{{$service->name}}</h5>
+                    <p class="card-text">{{$service->price}}</p>
+                    <a href="{{ url('/desainer/percetakan/services/'.$service->id) }}" class="btn btn-primary btn-block">Pesan</a>
+                </div>
+            </div>
+            @endforeach
+            @foreach ($services as $service)
+            <div class="card">
+                <img class="card-img-top img-fluid" src="https://via.placeholder.com/300x200" alt="Card image cap">
+                <div class="card-body">
+                    <h5 class="card-title">{{$service->name}}</h5>
+                    <p class="card-text">{{$service->price}}</p>
+                    <a href="{{ url('/desainer/percetakan/services/'.$service->id) }}" class="btn btn-primary btn-block">Pesan</a>
+                </div>
+            </div>
+            @endforeach
+            @foreach ($services as $service)
+            <div class="card">
+                <img class="card-img-top img-fluid" src="https://via.placeholder.com/300x200" alt="Card image cap">
+                <div class="card-body">
+                    <h5 class="card-title">{{$service->name}}</h5>
+                    <p class="card-text">{{$service->price}}</p>
+                    <a href="{{ url('/desainer/percetakan/services/'.$service->id) }}" class="btn btn-primary btn-block">Pesan</a>
+                </div>
+            </div>
+            @endforeach
+            @foreach ($services as $service)
+            <div class="card">
+                <img class="card-img-top img-fluid" src="https://via.placeholder.com/300x200" alt="Card image cap">
+                <div class="card-body">
+                    <h5 class="card-title">{{$service->name}}</h5>
+                    <p class="card-text">{{$service->price}}</p>
+                    <a href="{{ url('/desainer/percetakan/services/'.$service->id) }}" class="btn btn-primary btn-block">Pesan</a>
+                </div>
+            </div>
+            @endforeach
             @foreach ($services as $service)
             <div class="card">
                 <img class="card-img-top img-fluid" src="https://via.placeholder.com/300x200" alt="Card image cap">

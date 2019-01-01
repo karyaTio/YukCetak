@@ -48,14 +48,6 @@ class Percetakan extends Authenticatable
         return $this->hasMany("App\DesignJob");
     }
 
-    /* Relation with Orders
-     *
-     * One Percetakan has manny Orders
-     */
-    public function orders(){
-        return $this->hasMany("App\Order");
-    }
-
     public function id(){
         return $this->id;
     }

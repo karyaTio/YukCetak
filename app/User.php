@@ -39,4 +39,8 @@ class User extends Authenticatable
     public function designs(){
         return $this->hasMany('App\Design');
     }
+    
+    public function id(){
+        return $this->id;
+    }
 }

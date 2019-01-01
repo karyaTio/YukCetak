@@ -10,41 +10,66 @@
 <link rel="stylesheet" type="text/css" href="{{ asset('css/styles.css') }}">
 <noscript><link rel="stylesheet" type="text/css" href="{{ asset('css/noJS.css') }}" /></noscript>
 <body>
-    <div id="container">
-        <div id="header">
-	        @include('partials.navbar-percetakan')
-        </div>
+    <div id="header">
+        @include('partials.navbar-percetakan')
+    </div>
 
-        <div id="body">
-            <section class="container mt-4">
-                <table class="table">
-                    <thead>
-                        <tr>
-                        <th scope="col">#</th>
-                        <th scope="col">Pesanan</th>
-                        <th scope="col">Pesan</th>
-                        <th scope="col">Aksi</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        @foreach($orders as $index => $order)
-                        <tr>
-                            <th scope="row">{{$index+1}}</th>
-                            <th>{{$order->delivery_method}}</th>
-                            <td>{{$order->payment_method}}</td>
-                            <td>{{$order->status}}</td>
-                            <td>
-                                <button type="button" class="btn btn-info" data-id="{{ $order->id }}">Detail</button>
-                            </td>
-                        </tr>
-                        @endforeach
-                    </tbody>
-                    </table>
-            </section>
-        </div>
-        <div id="footer">
-            @include('partials.footer-percetakan')
-        </div>
+    <div id="body">
+
+        <section class="container">
+            <div class="row mt-2">
+                <div class="col-md-12 ">
+                    <nav class="navbar navbar-light bg-light justify-content-between">
+                        <a class="navbar-brand">Pesanan Cetak</a>
+                        <form class="form-inline float-left">
+                        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+                        </form>
+                    </nav>
+                </div>
+            </div>
+
+            @foreach ($orders as $index => $order)
+                
+            @endforeach
+            <div class="row mt-2">
+                <div class="card w-100 mt-1">
+                    <div class="card-body">
+                        <div class="row col-md-12" style="padding-left: 0px; padding-right: 0px">
+                            <div class="col-md-2" align="center" style="padding-left: 0px">
+                                <img src="https://via.placeholder.com/150x150">
+                            </div>
+                            <div class="col-md-7">
+                                <h3>{{$tes->name}}</h3>
+                                <p style="margin-bottom: 1px">Total Cetak :  {{ $order->quantity }}</p>
+                                <p>{{ $order->message }}</p>
+                            </div>
+                            <div class="col-md-3" style="padding-right: 0px">
+                                <div class="float-right" align="center">
+                                    <div>
+                                        <h5 style="margin-bottom: 0px">Total Biaya</h5>
+                                        <label>Rp.100.000</label>
+                                    </div>
+                                    <div class="row">
+                                        <div style="padding-right: 10px">
+                                            <a href="" class="btn btn-success" style="width: 100px">Terima</a>
+                                        </div>
+                                        <div>
+                                            <a href="" class="btn btn-danger" style="width: 100px">Tolak</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </div>
+
+    <div id="footer">
+        @include('partials.footer-percetakan')
     </div>
 
     <script type="text/javascript" src="{{ asset('js/app.js') }}"></script>

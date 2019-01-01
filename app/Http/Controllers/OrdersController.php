@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Percetakan;
+use App\Order;
 
 class OrdersController extends Controller
 {
@@ -15,8 +16,12 @@ class OrdersController extends Controller
     public function index($id){
         $percetakan = Percetakan::find($id);
 
-        $orders = $percetakan->orders()->get();
+        $services = $percetakan->services()->get();
 
-        return view('orders/index')->with(compact('orders'));
+        $orders = $services[0]->orders()->get();
+
+        $tes = $services[0];
+
+        return view('orders/index')->with(compact('orders', 'tes'));
     }
 }

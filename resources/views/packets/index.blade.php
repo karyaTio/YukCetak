@@ -9,37 +9,42 @@
 <link rel="stylesheet" type="text/css" href="{{ asset('css/styles.css') }}">
 <noscript><link rel="stylesheet" type="text/css" href="{{ asset('css/noJS.css') }}" /></noscript>
 <body>
-	@include('partials.navbar-percetakan')
-    <section class="container mt-4">
-        <a class="btn btn-primary m-2" href="{{ url('percetakan/services/'. $service->id . '/packets/create')}}">Tambah Paket</a>
-        <table class="table">
-            <thead>
-                <tr>
-                <th scope="col">No</th>
-                <th scope="col">Ukuran</th>
-                <th scope="col">Bahan</th>
-                <th scope="col">Harga</th>
-                <th scope="col">Aksi</th>
-                </tr>
-            </thead>
-            <tbody class="packets-list">
 
-                @foreach($packets as $index => $packet)
+    <div id="header">
+        @include('partials.navbar-percetakan')
+    </div>
+	
+    <div id="body">
+        <section class="container mt-4">
+            <a class="btn btn-primary m-2" href="{{ url('percetakan/services/'. $service->id . '/packets/create')}}">Tambah Paket</a>
+            <table class="table">
+                <thead>
                     <tr>
-                        <th scope="row">{{$index+1}}</th>
-                        <th>{{$packet->name}}</th>
-                        <td>{{$packet->price}}</td>
-                        <td>{{$packet->description}}</td>
-                        <td>
-                            <button class="btn btn-info">Info</button>
-                            <button type="button" class="btn btn-danger" id="show_modal_delete" data-id="{{ $packet->id }}">Hapus</button>
-                        </td>
+                    <th scope="col">No</th>
+                    <th scope="col">Ukuran</th>
+                    <th scope="col">Bahan</th>
+                    <th scope="col">Harga</th>
+                    <th scope="col">Aksi</th>
                     </tr>
-                @endforeach
+                </thead>
+                <tbody class="packets-list">
 
-            </tbody>
-        </table>
-    </section>
+                    @foreach($packets as $index => $packet)
+                        <tr>
+                            <th scope="row">{{$index+1}}</th>
+                            <th>{{$packet->name}}</th>
+                            <td>{{$packet->price}}</td>
+                            <td>{{$packet->description}}</td>
+                            <td>
+                                <button class="btn btn-info">Info</button>
+                                <button type="button" class="btn btn-danger" id="show_modal_delete" data-toggle="modal" data-target="#exampleModal" data-id="{{ $service->id }}">Hapus</button>
+                            </td>
+                        </tr>
+                    @endforeach
+                </tbody>
+            </table>
+        </section>
+    </div>
 
     <div class="modal fade" tabindex="-1" role="dialog" id="modal_delete">
         <div class="modal-dialog" role="document">
@@ -65,7 +70,9 @@
         </div>
     </div>
 
-	@include('partials.footer-percetakan')
+    <div id="footer">
+        @include('partials.footer-percetakan')
+    </div>
 
     <script type="text/javascript" src="{{ asset('js/app.js') }}"></script>
     <script type="text/javascript" src="{{ asset('js/modernizr.custom.79639.js') }}"></script>

@@ -71,7 +71,7 @@
 	        				</div>
 		                </div>
 		            </div>
-		        </div>
+				</div>
 		    </div>
 		    <div class="col-md-3 pl-1">
 		        <div class="card">

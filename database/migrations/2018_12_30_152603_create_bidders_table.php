@@ -17,6 +17,8 @@ class CreateBiddersTable extends Migration
             $table->increments('id');
             $table->integer('user_id');
             $table->integer('designjob_id');
+            $table->integer('bid');
+            $table->string('message');
             $table->timestamps();
         });
     }

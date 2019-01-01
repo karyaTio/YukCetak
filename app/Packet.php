@@ -11,8 +11,4 @@ class Packet extends Model
     public function services(){
         return $this->belongsTo('App\Service');
     }
-
-    public function order(){
-        return $this->belongsTo('App\Order');
-    }
 }

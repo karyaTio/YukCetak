@@ -16,40 +16,57 @@
         </div>
 
         <div id="body">
-            <section class="container mt-4">
 
-                <a href="{{ url('percetakan/design/create') }}" class="btn btn-primary mb-2">Pasang Job</a>
-
-                <table class="table">
-                    <thead>
-                        <tr>
-                        <th scope="col">#</th>
-                        <th scope="col">Title</th>
-                        <th scope="col">Description</th>
-                        <th scope="col">Budget</th>
-                        <th scope="col">Bidders</th>
-                        <th scope="col">Aksi</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        @foreach ($designjob as $index => $design)
-                        <tr>
-                            <th scope="row">{{ $index + 1}}</th>
-                            <td>{{$design->title}}</td>
-                            <td>{{$design->description}}</td>
-                            <td>{{$design->budget}}</td>
-                            <td>3 bid</td>
-                            <td>
-                                <a href="{{ url('percetakan/design/info/'.$design->id) }}" class="btn btn-info">Info</a>
-                                <a href="{{ url('percetakan/design/info/'.$design->id) }}" class="btn btn-primary">Edit</a>
-                                <a href="{{ url('percetakan/design/info/'.$design->id) }}" class="btn btn-danger">Hapus</a>
-                            </td>
-                        </tr>
-                        @endforeach
-                    </tbody>
-                    </table>
-            </section>
+            <div class="container mt-3">
+                <div class="row">
+                  <div class="col-3">
+                    <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical" style="background-color: #f1f1f1">
+                        <a href="{{ url('percetakan/design/create') }}" class="btn btn-outline-primary mb-2">Tambah Job Desain</a>
+                        <a class="nav-link active" id="v-pills-home-tab" data-toggle="pill" href="#v-pills-home" role="tab" aria-controls="v-pills-home" aria-selected="true">Job Desain</a>
+                        <a class="nav-link" id="v-pills-profile-tab" data-toggle="pill" href="#v-pills-profile" role="tab" aria-controls="v-pills-profile" aria-selected="false">Komentar</a>
+                        <a class="nav-link" id="v-pills-messages-tab" data-toggle="pill" href="#v-pills-messages" role="tab" aria-controls="v-pills-messages" aria-selected="false">Bidder</a>
+                    </div>
+                  </div>
+                  <div class="col-9">
+                    <div class="tab-content" id="v-pills-tabContent">
+                      <div class="tab-pane fade show active" id="v-pills-home" role="tabpanel" aria-labelledby="v-pills-home-tab">
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th scope="col">No</th>
+                                    <th scope="col">Title</th>
+                                    <th scope="col">Description</th>
+                                    <th scope="col">Budget</th>
+                                    <th scope="col">Bidders</th>
+                                    <th scope="col">Aksi</th>
+                                </tr>
+                            </thead>
+                                <tbody>
+                                  @foreach ($designjob as $index => $design)
+                                    <tr>
+                                        <th scope="row">{{ $index + 1}}</th>
+                                        <td>{{$design->title}}</td>
+                                        <td>{{$design->description}}</td>
+                                        <td>{{$design->budget}}</td>
+                                        <td>3 bid</td>
+                                        <td>
+                                          <a href="{{ url('percetakan/design/info/'.$design->id) }}" class="btn btn-info"><i class="fa fa-info"></i></a>
+                                          <a href="{{ url('percetakan/design/info/'.$design->id) }}" class="btn btn-primary"><i class="fa fa-edit"></i></a>
+                                          <a href="{{ url('percetakan/design/info/'.$design->id) }}" class="btn btn-danger"><i class="fa fa-trash"></i></a>
+                                        </td>
+                                    </tr>
+                                  @endforeach
+                                </tbody>
+                            </table>
+                      </div>
+                      <div class="tab-pane fade" id="v-pills-profile" role="tabpanel" aria-labelledby="v-pills-profile-tab">Riwayat Pesanan</div>
+                      <div class="tab-pane fade" id="v-pills-messages" role="tabpanel" aria-labelledby="v-pills-messages-tab">Projek Desain</div>
+                    </div>
+                  </div>
+                </div>
+            </div>
         </div>
+
         <div id="footer">
             @include('partials.footer-percetakan')
         </div>
