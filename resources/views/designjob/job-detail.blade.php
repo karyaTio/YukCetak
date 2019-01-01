@@ -87,7 +87,7 @@
 		                    <label>Rp{{$job->budget}}</label>
 		                </div>
 		                <div class="pt-1">
-		                    <a href="#" class="btn btn-outline-primary btn-sm"><i class="fa fa-chat"></i> Apply Job</a>
+		                    <a href="{{ url('job-desain/' . $job->id . '/apply') }}" class="btn btn-outline-primary btn-sm"><i class="fa fa-chat"></i> Apply Job</a>
 		                </div>
 		              </div>
 		            </div>

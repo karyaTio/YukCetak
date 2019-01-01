@@ -10,7 +10,7 @@ class DesignJobController extends Controller
 {
     public function __construct()
     {
-        $this->middleware('auth:percetakan')->except(['showAvailable', 'showDetail']);
+        $this->middleware('auth:percetakan')->except(['showAvailable', 'showDetail', 'showApply']);
     }
 
     public function index(){
@@ -60,5 +60,9 @@ class DesignJobController extends Controller
     public function info($id){
         $job = DesignJob::find($id);
         return view('designjob/info')->with(compact('job'));
+    }
+
+    public function showApply(){
+        return view('designjob/apply');
     }
 }

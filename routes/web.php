@@ -22,6 +22,7 @@ Route::get('/landing-page', 'PagesController@designerLandingPage');
 Route::get('/home-percetakan', 'PagesController@homePercetakan' )->name('home.percetakan');
 Route::get('/job-desain', 'DesignJobController@showAvailable');
 Route::get('/job-desain/{id}', 'DesignJobController@showDetail');
+Route::get('/job-desain/{id}/apply', 'DesignJobController@showApply');
 
 Route::prefix('/desainer')->group(function () {
     Route::get('/profil/{id}', 'DesignerController@show');
