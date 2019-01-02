@@ -60,4 +60,8 @@ Route::prefix('/percetakan')->group(function () {
     Route::get('/design/info/{id}', 'DesignJobController@info');
 
     Route::get('/orders/{id}', 'OrdersController@index');
+    Route::get('/orders/{id}/accept', 'OrdersController@accept');
+    Route::get('/orders/{id}/reject', 'OrdersController@reject');
 });
+
+Route::get('/download/{folder}/{filename}', 'PagesController@download');

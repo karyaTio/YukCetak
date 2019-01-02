@@ -14,7 +14,7 @@ class PagesController extends Controller
      */
     public function __construct()
     {
-        $this->middleware('auth')->except('designerLandingPage', 'index', 'homePercetakan');
+        $this->middleware('auth')->except('designerLandingPage', 'index', 'homePercetakan', 'download');
     }
 
     public function index(){
@@ -30,5 +30,21 @@ class PagesController extends Controller
         $percetakan = Percetakan::get();
 
         return view('home-designer')->with(compact('percetakan'));
+    }
+
+    public function download($folder, $filename){
+    // Check if file exists in storage directory
+    $file_path = storage_path() . '/app/' . $folder . '/' . $filename;
+    
+    
+    if ( file_exists( $file_path ) ) { 
+    // Send Download 
+    return \Response::download( $file_path, $filename ); 
+
+    } else { 
+    // Error exit( 'Requested file does not exist on our server!' ); 
+    echo "Error" . $file_path;
+    }
+ 
     }
 }

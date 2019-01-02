@@ -8,22 +8,27 @@
         <li class="nav-item active">
             <a class="nav-link" href="{{ url('/landing-page') }}">Home<span class="sr-only"></span></a>
         </li>
-        <li class="nav-item">
+        @if (!auth()->guest())
+        <li class="nav-item active">
+            <a class="nav-link" href="{{ url('desainer/profil') }}/{{ Auth::user()->id }}">Profil</a>
+        </li>
+        @endif
+        <li class="nav-item active">
             <a class="nav-link" href="{{ url('/job-desain') }}">Job Desain<span class="sr-only"></span></a>
         </li>
     </ul>
     <ul class="navbar-nav ml-auto">
         @if (auth()->guest())
-            <li class="nav-item">
+            <li class="nav-item active">
                 <a class="nav-link" href="{{ url('/register') }}">Daftar</a>
             </li>
-            <li class="nav-item" style="padding-right: 80px">
+            <li class="nav-item active" style="padding-right: 80px">
                 <a class="nav-link" href="{{ url('/login') }}">Masuk</a>
             </li>
         @else
             @if (Auth::user()->id)
-            <li class="nav-item" style="padding-right: 80px">
-                <a class="nav-link" href="{{ url('desainer/profil') }}/{{ Auth::user()->id }}">Profil</a>
+            <li class="nav-item active" style="padding-right: 80px">
+                <a class="nav-link" href="{{ url('/logout') }}">Logout</a>
             </li>
             @endif
         @endif

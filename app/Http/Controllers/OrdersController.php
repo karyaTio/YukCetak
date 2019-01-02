@@ -15,13 +15,40 @@ class OrdersController extends Controller
 
     public function index($id){
         $percetakan = Percetakan::find($id);
-
         $services = $percetakan->services()->get();
 
-        $orders = $services[0]->orders()->get();
+        $orders = [];
 
-        $tes = $services[0];
+        $order1 = $services[0]->orders()->orderBy('id', 'desc')->get();
+        $order2 = $services[1]->orders()->orderBy('id', 'desc')->get();
 
-        return view('orders/index')->with(compact('orders', 'tes'));
+        $orders.put($order1);
+        $orders.put($order2);
+
+        dd($orders);
+
+        // $tes = $services[0];
+
+        // return view('orders/index')->with(compact('orders', 'tes'));
+    }
+
+    public function accept($id){
+        $order = Order::find($id);
+
+        $order->status = 'Accepted';
+
+        $order->save();
+
+        return back();
+    }
+
+    public function reject($id){
+        $order = Order::find($id);
+
+        $order->status = 'Rejected';
+
+        $order->save();
+
+        return back();
     }
 }

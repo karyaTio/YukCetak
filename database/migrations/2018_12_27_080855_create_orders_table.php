@@ -20,7 +20,7 @@ class CreateOrdersTable extends Migration
             $table->integer('quantity');
             $table->string('delivery_method');
             $table->string('message');
-            $table->string('status')->default("pending");
+            $table->string('status')->default("requesting");
             $table->integer('rating')->default("-1");
             $table->string('attachment');
             $table->timestamps();
