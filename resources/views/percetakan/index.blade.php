@@ -54,7 +54,7 @@
 		<div class="row mt-2">
 				<div class="col-md-12 ">
 					<nav class="navbar navbar-light bg-light justify-content-between">
-					  <a class="navbar-brand">Cari Desainer</a>
+					  <h4>Cari Desainer</h4>
 					  <form class="form-inline float-left">
 					    <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
 					    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>

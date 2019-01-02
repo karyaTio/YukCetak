@@ -79,4 +79,9 @@ class ServicesController extends Controller
 
         return back();
     }
+
+    public function infoLayanan()
+    {
+        return view('services/info-layanan');
+    }
 }

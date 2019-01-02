@@ -32,7 +32,7 @@
             <div class="col-md-3 banner-img-container">
                 <img class="img-fluid banner-img img-thumbnail" src="https://via.placeholder.com/200x200" alt="">
             </div>
-            <div class="col-md-6">
+            <div class="col-md-6 mt-2">
                 <h3>{{ $designer->first_name . ' ' . $designer->last_name}}</h3>
                 <p>{{ $designer->email }}</p>
             </div>
@@ -83,7 +83,7 @@
                     <div class="form-group"><label class="control-label fwsb">Nama Lengkap</label>
                       <div class="row">
                         <div class="col-sm-12">
-                          <input class="form-control input-lg mb-20" type="text" value="Ragil Satrio" name="" id="" />
+                          <input class="form-control input-lg mb-20" type="text" value="Ragil Satrio" name="" id="" readonly>
                         </div>
                       </div>
                     </div>
@@ -93,7 +93,7 @@
                       </label>
                       <div class="row">
                         <div class="col-sm-12">
-                          <input class="form-control input-lg mb-20" placeholder="" type="text" value="2D Design, Motion Graphic" name="" id="" />
+                          <input class="form-control input-lg mb-20" placeholder="" type="text" value="2D Design, Motion Graphic" name="" id="" readonly>
                         </div>
                       </div>
                     </div>
@@ -101,7 +101,7 @@
                       <label class="control-label fwsb">Nomor Telepon</label>
                       <div class="row">
                         <div class="col-sm-12">
-                          <input class="form-control input-lg contact-number mb-20" placeholder="" type="text" value="087779744759" name="" id="" />
+                          <input class="form-control input-lg contact-number mb-20" placeholder="" type="text" value="087779744759" name="" id="" readonly>
                         </div>
                       </div>
                     </div>
@@ -110,13 +110,8 @@
                         <span class="translation_missing" title="translation missing: id.members.new.label.city">Kota</span>
                       </label>
                         <div class="row">
-                          <div class="col-sm-12">
-                            <select class="bs3-select form-control input-lg" name="" id="">
-                              <option value="">Bandar Lampung</option>
-                              <option value="">Jakarta</option>
-                              <option value="">Bandung</option>
-                              <option value="">Yogyakarta</option>
-                            </select>
+                          <div class="col-sm-12 mb-20">
+                            <input class="form-control input-lg contact-number mb-20" placeholder="" type="text" value="Bandar Lampung" name="" id="" readonly>
                           </div>
                         </div>
                       </div>
@@ -127,7 +122,7 @@
                         <label class="control-label fwsb">Jenis Kelamin</label>
                         <div class="row">
                           <div class="col-sm-12 mb-20">
-                            <input class="form-control input-lg contact-number mb-20" placeholder="" type="text" value="Laki - Laki" name="" id="" />
+                            <input class="form-control input-lg contact-number mb-20" placeholder="" type="text" value="Laki - Laki" name="" id="" readonly>
                           </div>
                         </div>
                       </div>
@@ -135,7 +130,7 @@
                         <label class="control-label fwsb">Tanggal Lahir</label>
                         <div class="row">
                           <div class="col-sm-12">
-                            <input class="form-control input-lg mb-20 datepicker" value="29 Mei 1995" type="text" name="" id="" />
+                            <input class="form-control input-lg mb-20 datepicker" value="29 Mei 1995" type="text" name="" id="" readonly>
                           </div>
                         </div>
                       </div>
@@ -143,7 +138,7 @@
                         <label class="control-label fwsb">Tentang Desainer</label>
                         <div class="row">
                           <div class="col-sm-12">
-                            <textarea class="form-control js-autosize bio mb-20" rows="3" name="" id="" placeholder="Tentang"></textarea>
+                            <textarea class="form-control js-autosize bio mb-20" rows="3" name="" id="" placeholder="Tentang" readonly></textarea>
                         </div>
                       </div>
                     </div>

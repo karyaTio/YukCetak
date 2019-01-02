@@ -50,6 +50,7 @@ Route::prefix('/percetakan')->group(function () {
 
     Route::get('/services', 'ServicesController@index');
     Route::get('/services/create', 'ServicesController@create');
+    Route::get('/services/info-layanan', 'ServicesController@infoLayanan');
     Route::post('/services', 'ServicesController@store');
     Route::post('/services/update', 'ServicesController@update');
     Route::post('/services/delete', 'ServicesController@destroy');
