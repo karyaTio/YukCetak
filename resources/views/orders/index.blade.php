@@ -24,15 +24,15 @@
                     </nav>
                 </div>
             </div>
-
-            @foreach ($orders as $index => $order)
+            
+            @forelse ($orders as $index => $order)
   
             <div class="row mt-2">
                 <div class="card w-100 mt-1">
                     <div class="card-body">
                         <div class="row col-md-12" style="padding-left: 0px; padding-right: 0px">
                             <div class="col-md-2" align="center" style="padding-left: 0px">
-                                <img src="https://via.placeholder.com/150x150">
+                                <img class="img-fluid" src="{{ url('/storage/' . $order->attachment)}}">
                             </div>
                             <div class="col-md-7">
                                 
@@ -68,7 +68,9 @@
                     </div>
                 </div>
             </div>
-            @endforeach
+            @empty
+
+            @endforelse
         </section>
 
     </div>

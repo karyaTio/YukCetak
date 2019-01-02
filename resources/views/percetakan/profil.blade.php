@@ -17,7 +17,7 @@
 
         <div class="banner-detail row">
             <div class="col-md-3 banner-img-container">
-                <img class="img-fluid banner-img img-thumbnail" src="https://via.placeholder.com/200x200" alt="">
+                <img class="img-fluid banner-img img-thumbnail" src="{{ url('/storage/'. $percetakan->attachment) }}" alt="">
             </div>
             <div class="col-md-6">
                 <h3>{{$percetakan->name}}</h3>

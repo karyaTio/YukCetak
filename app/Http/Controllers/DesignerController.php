@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\User;
 use App\Design;
+use App\Service;
 
 class DesignerController extends Controller
 {
@@ -28,7 +29,17 @@ class DesignerController extends Controller
 
     public function pesananSaya()
     {
-        return view('designer/pesanan-saya');
+        $designer = User::find(request()->user()->id());
+
+        $orders = $designer->orders()->get();
+
+        $services = collect();
+        
+        for($i = 0; $i<count($orders); $i++){
+            $services->push(Service::find($orders[$i]->service_id));
+        }
+
+        return view('designer/pesanan-saya')->with(compact('orders', 'services'));
     }
     public function editProfil()
     {

@@ -17,7 +17,7 @@ class PagesController extends Controller
      */
     public function __construct()
     {
-        $this->middleware('auth')->except('designerLandingPage', 'index', 'homePercetakan', 'download');
+        $this->middleware('auth')->except('designerLandingPage', 'index', 'homePercetakan', 'download', 'showimage');
     }
 
     public function index(){

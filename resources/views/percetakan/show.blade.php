@@ -30,11 +30,11 @@
 
         <div class="banner-detail row">
             <div class="col-md-3 banner-img-container">
-                <img class="img-fluid banner-img img-thumbnail" src="https://via.placeholder.com/200x200" alt="">
+                <img class="img-fluid banner-img img-thumbnail" src="{{ url('/storage/'. $percetakan->attachment) }}" alt="">
             </div>
             <div class="col-md-6">
-                <h3>Nama Percetakan</h3>
-                <p style="margin-bottom: 4px">percetakan@gmail.com</p>
+                <h3>{{$percetakan->name}}</h3>
+                <p style="margin-bottom: 4px">{{$percetakan->email}}</p>
                 <div class="star">
                     <i class="fa fa-star"></i>
                     <i class="fa fa-star"></i>
@@ -110,8 +110,7 @@
                     </div>
                   </div>
                 </div>
-            </div>
-            @endforeach
+              </div>
               </div>
           </div>
           <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">

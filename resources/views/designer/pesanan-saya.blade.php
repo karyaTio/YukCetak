@@ -17,23 +17,24 @@
 	<div id="body">
 
 		<section class="container mt-2">
-
+			@foreach ($orders as $index => $order)
 			<div class="row mt-2">
 				<div class="card w-100 mt-1">
 					<div class="card-body">
 					  	<div class="row col-md-12" style="padding-left: 0px; padding-right: 0px">
 					  		<div class="col-md-2" align="center" style="padding-left: 0px">
-					  			<img src="https://via.placeholder.com/150x150">
+					  			<img class="img-fluid" src="{{ url('/storage/'.$order->attachment)}}">
 					  		</div>
 					  		<div class="col-md-7">
-					  			<h4>Nama Pesanan</h4>
-					  			<p style="font-size: 16px">Jumlah Cetak</p>
-					  			<p style="font-size: 16px">Biaya</p>
+					  			<h4>{{$services[$index]->name}}</h4>
+					  			<p style="font-size: 16px">Jumlah Cetak {{$order->quantity}}</p>
+								  <p style="font-size: 16px">cara antar {{$order->delivery_method}}</p>
+								  <p>{{$order->message}}</p>
 					  		</div>
 					  		<div class="col-md-3" style="padding-right: 0px">
 				  				<div class="float-left pl-4" align="center">
 				  					<div>
-				  						<p>Pesanan Sedang Dalam proses</p>
+				  						<p>status : {{$order->status}}</p>
 				  					</div>
 				  					<a href="" class="btn btn-primary btn-sm" style="width: 150px">Detail Pesanan</a>
 				  				</div>
@@ -42,31 +43,7 @@
 					</div>
 				</div>
 			</div>
-
-			<div class="row mt-2">
-				<div class="card w-100 mt-1">
-					<div class="card-body">
-					  	<div class="row col-md-12" style="padding-left: 0px; padding-right: 0px">
-					  		<div class="col-md-2" align="center" style="padding-left: 0px">
-					  			<img src="https://via.placeholder.com/150x150">
-					  		</div>
-					  		<div class="col-md-7">
-					  			<h4>Nama Pesanan</h4>
-					  			<p style="font-size: 16px">Jumlah Cetak</p>
-					  			<p style="font-size: 16px">Biaya</p>
-					  		</div>
-					  		<div class="col-md-3" style="padding-right: 0px">
-				  				<div class="float-left pl-4" align="center">
-				  					<div>
-				  						<p>Pesanan Sedang Dalam proses</p>
-				  					</div>
-				  					<a href="" class="btn btn-primary btn-sm" style="width: 150px">Detail Pesanan</a>
-				  				</div>
-					  		</div>
-					  	</div>
-					</div>
-				</div>
-			</div>
+			@endforeach
 		</section>
 	</div>
 	  
