@@ -5,11 +5,17 @@
     </button>
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
-        <li class="nav-item active">
+        <li class="nav-item">
             <a class="nav-link" href="{{ url('/landing-page') }}">Home<span class="sr-only"></span></a>
         </li>
         <li class="nav-item">
-            <a class="nav-link" href="{{ url('desainer/profil') }}/{{ Auth::user()->id }}">Profil</a>
+            @if (auth()->guest())
+                <a class="nav-link" href="{{ url('/login') }}">Profil</a>
+            @else
+                @if (Auth::user()->id)
+                <a class="nav-link" href="{{ url('desainer/profil') }}/{{ Auth::user()->id }}">Profil</a>
+                @endif
+            @endif
         </li>
         <li class="nav-item">
             <a class="nav-link" href="{{ url('desainer/pesanan-saya') }}">Pesanan Saya<span class="sr-only"></span></a>
