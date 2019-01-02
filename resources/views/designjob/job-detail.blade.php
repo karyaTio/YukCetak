@@ -65,11 +65,35 @@
 							</div>
 						</div>
 						<hr>
-						<ul class="nav">
-							<li class="nav-item">
-								<a class="nav-link" href="#">Bidders</a>
-							</li>
+						<ul class="nav nav-tabs" id="myTab" role="tablist">
+						  <li class="nav-item">
+						    <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">Bidder</a>
+						  </li>
 						</ul>
+						<div class="tab-content" id="myTabContent">
+						  <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+						  	<div class="card mt-2">
+						  	  <div class="card-body">
+						  	  	<div class="row">
+						  	  		<div class="col-md-2">
+						  	  			<img alt="gantvespa - Sribulancer" class="img-responsive img-thumbnail img-circle avatar-member" src="https://sribulancer-production-sg.s3.ap-southeast-1.amazonaws.com/assets/media/freelancer_member/5c26def54049a14fd703d9ff/thumb_7f8b110837.jpg" width="100" height="100"/>
+						  	  		</div>
+						  	  		<div class="col-md-10">
+						  	  			<div class="applicant-identity">
+						  	  				<div class="user-name-date-applied mb-10">
+						  	  					<h4 class="no-mt iblocks font2"><a href="/id/users/gantvespa">gantiwa Sastra</a></h4>
+						  	  					<p>Date Applied: 02 Jan 2019 - 14:30</p>
+						  	  				</div>
+						  	  				<div class="user-rating rating mb-10">
+						  	  					<span class="text-muted">Belum ada rating</span>
+						  	  				</div>
+						  	  			</div>
+						  	  		</div>
+						  	  	</div>
+						  	  </div>
+						  	</div>
+						  </div>
+						</div>
 						<hr>
 					</div>
 					<div class="col-md-3">

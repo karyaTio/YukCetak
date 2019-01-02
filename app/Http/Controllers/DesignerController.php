@@ -27,4 +27,8 @@ class DesignerController extends Controller
     {
         return view('designer/pesanan-saya');
     }
+    public function editProfil()
+    {
+        return view('designer/edit-profil');
+    }
 }

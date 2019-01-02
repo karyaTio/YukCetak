@@ -43,4 +43,9 @@ class PercetakanController extends Controller
 
         return view('percetakan/show')->with(compact('services'));
     }
+
+    public function editProfil()
+    {
+        return view('percetakan/edit-profil');
+    }
 }

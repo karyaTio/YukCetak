@@ -15,13 +15,15 @@
 			<form action="" method="POST">
 				<div class="form-group">
 					<label for="">Bid</label>
-					<input type="number" class="form-control" name="bid">
+					<input type="number" class="form-control" name="bid" placeholder="masukkan jumlah bid">
 				</div>
 				<div class="form-group">
-					<textarea name="message" id="" cols="30" rows="10" class="form-control"></textarea>
+					<label class="control-label fwsb">Deskripsi</label>
+					<p class="small help-block no-mti pb-10">Masukan deskripsi yang menarik agar anda diterima untuk job ini.</p>
+					<textarea name="message" id="" cols="30" rows="5" class="form-control" placeholder="masukkan deskripsi anda min.200 kata"></textarea>
 				</div>
 				<div class="form-group">
-					<button type="submit">Bid</button>
+					<button class="btn btn-primary" type="submit">Bid</button>
 				</div>
 			</form>
 		</section>

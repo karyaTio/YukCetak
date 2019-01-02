@@ -20,13 +20,13 @@
 		  </ol>
 		  <div class="carousel-inner">
 		    <div class="carousel-item active">
-		      <img class="d-block w-100" src="{{ asset('image/custom-bahasa.jpg')}}" alt="First slide">
+		      <img class="d-block w-100" src="{{ asset('image/1.png')}}" alt="First slide">
 		    </div>
 		    <div class="carousel-item">
-		      <img class="d-block w-100" src="{{ asset('image/product.jpg')}}" alt="Second slide">
+		      <img class="d-block w-100" src="{{ asset('image/2.png')}}" alt="Second slide">
 		    </div>
 		    <div class="carousel-item">
-		      <img class="d-block w-100" src="https://via.placeholder.com/1000x200" alt="Third slide">
+		      <img class="d-block w-100" src="{{ asset('image/3.png')}}" alt="Third slide">
 		    </div>
 		  </div>
 		  <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
@@ -54,7 +54,7 @@
 			</div>
 		</div>
 
-		<div class="row">
+		<div class="row mt-2">
 		    <div class="col-md-3 pl-1">
 		        <div class="card">
 		            <img class="card-img-top img-fluid" src="https://via.placeholder.com/300x200" alt="Card image cap">

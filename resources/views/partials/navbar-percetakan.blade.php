@@ -8,19 +8,19 @@
         <li class="nav-item active">
             <a class="nav-link" href="{{ url('/percetakan/dashboard') }}">Home<span class="sr-only"></span></a>
         </li>
-        <li class="nav-item active">
+        <li class="nav-item">
             <a class="nav-link" href="{{ url('/percetakan/profil') }}/{{ Auth::user()->id }}">Profil<span class="sr-only"></span></a>
         </li>
-        <li class="nav-item active">
+        <li class="nav-item">
             <a class="nav-link" href="{{ url('/percetakan/orders') }}/{{Auth::user()->id}}">Pesanan Cetak<span class="sr-only"></span></a>
         </li>
-        <li class="nav-item active">
+        <li class="nav-item">
             <a class="nav-link" href="{{ url('/percetakan/design') }}">Pasang Job<span class="sr-only"></span></a>
         </li>
     </ul>
     <ul class="navbar-nav ml-auto">
         @if (Auth::user()->id)
-            <li class="nav-item active" style="padding-right: 80px">
+            <li class="nav-item" style="padding-right: 80px">
                 <a class="nav-link" href="{{ url('/percetakan/logout') }}">Logout</a>
             </li>
         @else
