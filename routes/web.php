@@ -26,6 +26,8 @@ Route::get('/job-desain/{id}/apply', 'DesignJobController@showApply');
 
 Route::prefix('/desainer')->group(function () {
     Route::get('/profil/{id}', 'DesignerController@show');
+    Route::get('/pesanan-saya', 'DesignerController@pesananSaya');
+    Route::get('/edit-profil', 'DesignerController@editProfil');
     Route::get('/percetakan/{id}', 'PercetakanController@show');
     Route::get('/percetakan/services/{id}', 'ServicesController@show');
     Route::post('/percetakan/services/{id}/orders', 'OrdersDesignerController@store');
@@ -41,6 +43,7 @@ Route::prefix('/percetakan')->group(function () {
     Route::get('/dashboard', 'PercetakanController@dashboard')->name('percetakan.home');
     Route::get('/logout', 'AuthPercetakan\PercetakanLoginController@logout');
     Route::get('/profil/{id}', 'PercetakanController@profil')->name('percetakan.profil');
+    Route::get('/edit-profil', 'PercetakanController@editProfil')->name('percetakan.edit-profil');
 
     Route::get('/services', 'ServicesController@index');
     Route::get('/services/create', 'ServicesController@create');
