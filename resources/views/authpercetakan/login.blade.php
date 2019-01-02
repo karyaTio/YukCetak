@@ -3,9 +3,9 @@
 <head>
     <title>Masuk</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    @include('partials.import-head')
 </head>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-    <link rel="stylesheet" type="text/css" href="{{ asset('css/styles.css') }}">
+    
 <body>
     <div class="container-fluid">
       <div class="row">
@@ -52,7 +52,7 @@
                             {{ __('Remember Me') }}
                         </label>
                       </div>
-                        <div class="text-center pt-2">
+                        <div class="text-center pt-4">
                             <button type="submit" class="btn btn-primary" style="width: 100%">
                                 {{ __('Login') }}
                             </button>

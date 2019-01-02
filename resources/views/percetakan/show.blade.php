@@ -30,9 +30,9 @@
 
         <div class="banner-detail row">
             <div class="col-md-3 banner-img-container">
-                <img class="img-fluid banner-img img-thumbnail" src="https://via.placeholder.com/200x200" alt="">
+                <img class="img-fluid banner-img img-thumbnail" src="{{ asset('image/office1.jpg')}}" alt="" style="max-width: 300px; max-height: 200px">
             </div>
-            <div class="col-md-6">
+            <div class="col-md-6 mt-2">
                 <h3>Nama Percetakan</h3>
                 <p style="margin-bottom: 4px">percetakan@gmail.com</p>
                 <div class="star">
@@ -110,10 +110,8 @@
                     </div>
                   </div>
                 </div>
-            </div>
-            @endforeach
               </div>
-          </div>
+            </div>
           <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">
               <div class="card card-default card-freelancer-dashboard mt-4">
                 <div class="card-body">

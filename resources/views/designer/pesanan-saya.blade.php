@@ -35,7 +35,7 @@
 				  					<div>
 				  						<p>Pesanan Sedang Dalam proses</p>
 				  					</div>
-				  					<a href="" class="btn btn-primary btn-sm" style="width: 150px">Detail Pesanan</a>
+				  					<a href="" class="btn btn-primary btn-sm">Upload bukti transfer</a>
 				  				</div>
 					  		</div>
 					  	</div>
@@ -60,7 +60,7 @@
 				  					<div>
 				  						<p>Pesanan Sedang Dalam proses</p>
 				  					</div>
-				  					<a href="" class="btn btn-primary btn-sm" style="width: 150px">Detail Pesanan</a>
+				  					<a href="" class="btn btn-primary btn-sm">Upload bukti transfer</a>
 				  				</div>
 					  		</div>
 					  	</div>

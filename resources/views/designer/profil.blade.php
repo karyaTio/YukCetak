@@ -63,7 +63,7 @@
                       <div class="grid-container">
                       @foreach ($designs as $design)
                         <div class="card">
-                            <img style="max-height:200px;" class="card-img-top img-fluid" src="{{ url('/storage/'.$design->attachment) }}" alt="Card image cap">
+                            <img style="max-height:200px; max-width: 300px;" class="card-img-top img-fluid" src="{{ url('/storage/'.$design->attachment) }}" alt="Card image cap">
                             <div class="card-body">
                                 <h5 class="card-title">{{$design->title}}</h5>
                                 <a href="" class="btn btn-primary btn-block btn-sm">Detail</a>
