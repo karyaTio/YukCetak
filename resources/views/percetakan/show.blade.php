@@ -110,6 +110,8 @@
                     </div>
                   </div>
                 </div>
+            </div>
+            @endforeach
               </div>
           </div>
           <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">

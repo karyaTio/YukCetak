@@ -8,6 +8,14 @@
         <li class="nav-item">
             <a class="nav-link" href="{{ url('/landing-page') }}">Home<span class="sr-only"></span></a>
         </li>
+<<<<<<< HEAD
+        @if (!auth()->guest())
+        <li class="nav-item active">
+            <a class="nav-link" href="{{ url('desainer/profil') }}/{{ Auth::user()->id }}">Profil</a>
+        </li>
+        @endif
+        <li class="nav-item active">
+=======
         <li class="nav-item">
             @if (auth()->guest())
                 <a class="nav-link" href="{{ url('/login') }}">Profil</a>
@@ -21,21 +29,27 @@
             <a class="nav-link" href="{{ url('desainer/pesanan-saya') }}">Pesanan Saya<span class="sr-only"></span></a>
         </li>
         <li class="nav-item">
+>>>>>>> 76ba42c7c12eb03bcfbfd4ba173a80e1b6b4616f
             <a class="nav-link" href="{{ url('/job-desain') }}">Job Desain<span class="sr-only"></span></a>
         </li>
     </ul>
     <ul class="navbar-nav ml-auto">
         @if (auth()->guest())
-            <li class="nav-item">
+            <li class="nav-item active">
                 <a class="nav-link" href="{{ url('/register') }}">Daftar</a>
             </li>
-            <li class="nav-item" style="padding-right: 80px">
+            <li class="nav-item active" style="padding-right: 80px">
                 <a class="nav-link" href="{{ url('/login') }}">Masuk</a>
             </li>
         @else
             @if (Auth::user()->id)
+<<<<<<< HEAD
+            <li class="nav-item active" style="padding-right: 80px">
+                <a class="nav-link" href="{{ url('/logout') }}">Logout</a>
+=======
             <li class="nav-item" style="padding-right: 80px">
                 <a class="nav-link" href="{{ url('/percetakan/logout') }}">Logout</a>
+>>>>>>> 76ba42c7c12eb03bcfbfd4ba173a80e1b6b4616f
             </li>
             @endif
         @endif
