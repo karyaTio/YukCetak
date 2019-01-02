@@ -30,7 +30,7 @@
 
         <div class="banner-detail row">
             <div class="col-md-3 banner-img-container">
-                <img class="img-fluid banner-img img-thumbnail" src="{{ url('/storage/'. $percetakan->attachment) }}" alt="">
+                <img class="img-fluid banner-img img-thumbnail" style="max-width: 300px; max-height: 200px" src="{{ url('/storage/'. $percetakan->attachment) }}" alt="">
             </div>
             <div class="col-md-6">
                 <h3>{{$percetakan->name}}</h3>
@@ -111,8 +111,7 @@
                   </div>
                 </div>
               </div>
-              </div>
-          </div>
+            </div>
           <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">
               <div class="card card-default card-freelancer-dashboard mt-4">
                 <div class="card-body">

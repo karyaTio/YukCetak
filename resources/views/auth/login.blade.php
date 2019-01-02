@@ -51,8 +51,8 @@
                             {{ __('Remember Me') }}
                         </label>
                       </div>
-                        <div class="text-center pt-2">
-                            <button type="submit" class="btn btn-primary">
+                        <div class="text-center pt-4">
+                            <button type="submit" class="btn btn-primary" style="width: 100%; color: #fff">
                                 {{ __('Login') }}
                             </button>
                         </div>

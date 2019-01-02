@@ -62,13 +62,6 @@
 	</section>
 
 	<section class="section-official container mt-2 shadow">
-		<p>Daftar percetakan</p>
-		@foreach ($percetakan as $item)
-				<a href="{{ url('desainer/percetakan/' . $item->id) }}">{{ $item->name }}</a>
-		@endforeach
-	</section>
-
-	<section class="section-official container mt-2 shadow">
 
 		<h5>Official Printing</h5>
 
@@ -77,81 +70,21 @@
 				<img class="img-fluid" src="{{ asset('image/banner-office.jpg')}}" alt="Third slide">
 			</div>
 			<div class="col-md-9">
-				<div class="row">
-
-					<div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
-					  <div class="carousel-inner">
-					    <div class="carousel-item active">
-					      	<div class="row">
-					      		<div class="col-md-3 pl-1">
-		      						<a href="{{ asset('/percetakan/show') }}"><img class="img-fluid shadow-sm" src="{{ asset('image/office1.jpg')}}" alt="Third slide"></a>
-		      					</div>
-		      					<div class="col-md-3 pl-1">
-		      						<a href="{{ asset('/percetakan/show') }}"><img class="img-fluid" src="https://via.placeholder.com/300x200" alt="Third slide"></a>
-		      					</div>
-		      					<div class="col-md-3 pl-1">
-		      						<a href="{{ asset('/percetakan/show') }}"><img class="img-fluid" src="https://via.placeholder.com/300x200" alt="Third slide"></a>
-		      					</div>
-		      					<div class="col-md-3 pl-1">
-		      						<a href="{{ asset('/percetakan/show') }}"><img class="img-fluid" src="https://via.placeholder.com/300x200" alt="Third slide"></a>
-		      					</div>
-		      				</div>
-
-		      				<div class="row mt-1">
-		      					<div class="col-md-3 pl-1">
-		      						<a href="{{ asset('/percetakan/show') }}"><img class="img-fluid" src="https://via.placeholder.com/300x200" alt="Third slide"></a>
-		      					</div>
-		      					<div class="col-md-3 pl-1">
-		      						<a href="{{ asset('/percetakan/show') }}"><img class="img-fluid" src="https://via.placeholder.com/300x200" alt="Third slide"></a>
-		      					</div>
-		      					<div class="col-md-3 pl-1">
-		      						<a href="{{ asset('/percetakan/show') }}"><img class="img-fluid" src="https://via.placeholder.com/300x200" alt="Third slide"></a>
-		      					</div>
-		      					<div class="col-md-3 pl-1">
-		      						<a href="{{ asset('/percetakan/show') }}"><img class="img-fluid" src="https://via.placeholder.com/300x200" alt="Third slide"></a>
-		      					</div>
-		      				</div>
-					    </div>
-					    <div class="carousel-item">
-					      <div class="row">
-					      		<div class="col-md-3 pl-1">
-		      						<a href="{{ asset('/percetakan/show') }}"><img class="img-fluid shadow-sm" src="{{ asset('image/office1.jpg')}}" alt="Third slide"></a>
-		      					</div>
-		      					<div class="col-md-3 pl-1">
-		      						<a href="{{ asset('/percetakan/show') }}"><img class="img-fluid" src="https://via.placeholder.com/300x200" alt="Third slide"></a>
-		      					</div>
-		      					<div class="col-md-3 pl-1">
-		      						<a href="{{ asset('/percetakan/show') }}"><img class="img-fluid" src="https://via.placeholder.com/300x200" alt="Third slide"></a>
-		      					</div>
-		      					<div class="col-md-3 pl-1">
-		      						<a href="{{ asset('/percetakan/show') }}"><img class="img-fluid" src="https://via.placeholder.com/300x200" alt="Third slide"></a>
-		      					</div>
-		      				</div>
-
-		      				<div class="row mt-1">
-		      					<div class="col-md-3 pl-1">
-		      						<a href="{{ asset('/percetakan/show') }}"><img class="img-fluid" src="https://via.placeholder.com/300x200" alt="Third slide"></a>
-		      					</div>
-		      					<div class="col-md-3 pl-1">
-		      						<a href="{{ asset('/percetakan/show') }}"><img class="img-fluid" src="https://via.placeholder.com/300x200" alt="Third slide"></a>
-		      					</div>
-		      					<div class="col-md-3 pl-1">
-		      						<a href="{{ asset('/percetakan/show') }}"><img class="img-fluid" src="https://via.placeholder.com/300x200" alt="Third slide"></a>
-		      					</div>
-		      					<div class="col-md-3 pl-1">
-		      						<a href="{{ asset('/percetakan/show') }}"><img class="img-fluid" src="https://via.placeholder.com/300x200" alt="Third slide"></a>
-		      					</div>
-		      				</div>
-					    </div>
-					  </div>
-					  <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev" style="width: 5%">
-					    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-					  </a>
-					  <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next" style="width: 5%">
-					    <span class="carousel-control-next-icon" aria-hidden="true""></span>
-					  </a>
-					</div>
-			</div>
+				<div class="grid">
+			      	<div class="row">
+			      		@foreach ($percetakan as $item)
+			      		<div class="col-md-3 content" align="center">
+			      			<div class="img">
+			      				<a href="{{ url('desainer/percetakan/' . $item->id) }}"><img class="img-fluid shadow-sm" src="{{ asset('image/office1.jpg')}}" alt="Third slide"></a>
+			      			</div>
+			      			<div class="text">
+			      				<h3>{{$item->name}}</h3>
+			      			</div>
+      					</div>
+      					@endforeach
+      				</div>
+      			</div>
+      		</div>
 		</div>
 	</section>
 
