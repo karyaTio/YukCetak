@@ -26,6 +26,7 @@ Route::get('/job-desain/{id}/apply', 'DesignJobController@showApply');
 
 Route::prefix('/desainer')->group(function () {
     Route::get('/profil/{id}', 'DesignerController@show');
+    Route::get('/pesanan-saya', 'DesignerController@pesananSaya');
     Route::get('/percetakan/{id}', 'PercetakanController@show');
     Route::get('/percetakan/services/{id}', 'ServicesController@show');
     Route::post('/percetakan/services/{id}/orders', 'OrdersDesignerController@store');

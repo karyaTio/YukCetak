@@ -20,6 +20,11 @@ class DesignerController extends Controller
     public function show($id){
         $designer = User::find($id);
 
-        return view('designer/show')->with(compact('designer'));
+        return view('designer/profil')->with(compact('designer'));
+    }
+
+    public function pesananSaya()
+    {
+        return view('designer/pesanan-saya');
     }
 }

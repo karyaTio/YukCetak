@@ -65,12 +65,9 @@
 							</div>
 						</div>
 						<hr>
-						<ul class="nav ">
+						<ul class="nav">
 							<li class="nav-item">
-								<a class="nav-link active" href="#">Diskusi</a>
-							</li>
-							<li class="nav-item">
-								<a class="nav-link" href="#">Submited Desain</a>
+								<a class="nav-link" href="#">Bidders</a>
 							</li>
 						</ul>
 						<hr>

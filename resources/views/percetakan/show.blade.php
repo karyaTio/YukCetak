@@ -80,66 +80,6 @@
                 </div>
             </div>
             @endforeach
-            @foreach ($services as $service)
-            <div class="card">
-                <img class="card-img-top img-fluid" src="https://via.placeholder.com/300x200" alt="Card image cap">
-                <div class="card-body">
-                    <h5 class="card-title">{{$service->name}}</h5>
-                    <p class="card-text">{{$service->price}}</p>
-                    <a href="{{ url('/desainer/percetakan/services/'.$service->id) }}" class="btn btn-primary btn-block">Pesan</a>
-                </div>
-            </div>
-            @endforeach
-            @foreach ($services as $service)
-            <div class="card">
-                <img class="card-img-top img-fluid" src="https://via.placeholder.com/300x200" alt="Card image cap">
-                <div class="card-body">
-                    <h5 class="card-title">{{$service->name}}</h5>
-                    <p class="card-text">{{$service->price}}</p>
-                    <a href="{{ url('/desainer/percetakan/services/'.$service->id) }}" class="btn btn-primary btn-block">Pesan</a>
-                </div>
-            </div>
-            @endforeach
-            @foreach ($services as $service)
-            <div class="card">
-                <img class="card-img-top img-fluid" src="https://via.placeholder.com/300x200" alt="Card image cap">
-                <div class="card-body">
-                    <h5 class="card-title">{{$service->name}}</h5>
-                    <p class="card-text">{{$service->price}}</p>
-                    <a href="{{ url('/desainer/percetakan/services/'.$service->id) }}" class="btn btn-primary btn-block">Pesan</a>
-                </div>
-            </div>
-            @endforeach
-            @foreach ($services as $service)
-            <div class="card">
-                <img class="card-img-top img-fluid" src="https://via.placeholder.com/300x200" alt="Card image cap">
-                <div class="card-body">
-                    <h5 class="card-title">{{$service->name}}</h5>
-                    <p class="card-text">{{$service->price}}</p>
-                    <a href="{{ url('/desainer/percetakan/services/'.$service->id) }}" class="btn btn-primary btn-block">Pesan</a>
-                </div>
-            </div>
-            @endforeach
-            @foreach ($services as $service)
-            <div class="card">
-                <img class="card-img-top img-fluid" src="https://via.placeholder.com/300x200" alt="Card image cap">
-                <div class="card-body">
-                    <h5 class="card-title">{{$service->name}}</h5>
-                    <p class="card-text">{{$service->price}}</p>
-                    <a href="{{ url('/desainer/percetakan/services/'.$service->id) }}" class="btn btn-primary btn-block">Pesan</a>
-                </div>
-            </div>
-            @endforeach
-            @foreach ($services as $service)
-            <div class="card">
-                <img class="card-img-top img-fluid" src="https://via.placeholder.com/300x200" alt="Card image cap">
-                <div class="card-body">
-                    <h5 class="card-title">{{$service->name}}</h5>
-                    <p class="card-text">{{$service->price}}</p>
-                    <a href="{{ url('/desainer/percetakan/services/'.$service->id) }}" class="btn btn-primary btn-block">Pesan</a>
-                </div>
-            </div>
-            @endforeach
         </div>
     </section>
 

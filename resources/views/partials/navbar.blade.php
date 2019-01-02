@@ -9,6 +9,12 @@
             <a class="nav-link" href="{{ url('/landing-page') }}">Home<span class="sr-only"></span></a>
         </li>
         <li class="nav-item">
+            <a class="nav-link" href="{{ url('desainer/profil') }}/{{ Auth::user()->id }}">Profil</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="{{ url('desainer/pesanan-saya') }}">Pesanan Saya<span class="sr-only"></span></a>
+        </li>
+        <li class="nav-item">
             <a class="nav-link" href="{{ url('/job-desain') }}">Job Desain<span class="sr-only"></span></a>
         </li>
     </ul>
@@ -23,7 +29,7 @@
         @else
             @if (Auth::user()->id)
             <li class="nav-item" style="padding-right: 80px">
-                <a class="nav-link" href="{{ url('desainer/profil') }}/{{ Auth::user()->id }}">Profil</a>
+                <a class="nav-link" href="{{ url('/percetakan/logout') }}">Logout</a>
             </li>
             @endif
         @endif

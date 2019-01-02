@@ -35,11 +35,15 @@
             </div>
         </div>
     </div>
+    <br>
+    <br>
+    <br>
+    <hr>
 
-    <div class="container mt-5">
+    <div class="container">
         <div class="row">
           <div class="col-3">
-            <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical" style="background-color: #f1f1f1">
+            <div class="nav flex-column nav-pills pr-2 pl-2 pt-1" id="v-pills-tab" role="tablist" aria-orientation="vertical" style="background-color: #f1f1f1">
                 <a href="{{ url('percetakan/services/create') }}" class="btn btn-outline-primary mb-2">Tambah Layanan</a>
                 <a class="nav-link active" id="v-pills-home-tab" data-toggle="pill" href="#v-pills-home" role="tab" aria-controls="v-pills-home" aria-selected="true">Layanan</a>
                 <a class="nav-link" id="v-pills-profile-tab" data-toggle="pill" href="#v-pills-profile" role="tab" aria-controls="v-pills-profile" aria-selected="false">Riwayat Pesanan</a>

@@ -34,7 +34,16 @@
                             <option selected>Open this select menu</option>
                             <option value="banner">Banner</option>
                             <option value="kartu_nama">Kartu nama</option>
+                            <option value="flyer">Flyer</option>
+                            <option value="brosur">Brosur</option>
+                            <option value="poster">Poster</option>
                             <option value="baju">Baju</option>
+                            <option value="square_card">Square Card</option>
+                            <option value="kop_surat">Kop Surat</option>
+                            <option value="Amplop">Amplop</option>
+                            <option value="mug">Mug</option>
+                            <option value="foto">Foto</option>
+                            
                         </select>
                     </div>
 
