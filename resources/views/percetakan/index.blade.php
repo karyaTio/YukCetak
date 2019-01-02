@@ -44,7 +44,7 @@
 		<div class="row mt-2">
 				<div class="col-md-12 ">
 					<nav class="navbar navbar-light bg-light justify-content-between">
-					  <a class="navbar-brand">Cari Desainer</a>
+					  <h4>Cari Desainer</h4>
 					  <form class="form-inline float-left">
 					    <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
 					    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
@@ -57,7 +57,7 @@
 		<div class="row mt-2">
 		    <div class="col-md-3 pl-1">
 		        <div class="card">
-		            <img class="card-img-top img-fluid" src="https://via.placeholder.com/300x200" alt="Card image cap">
+		            <img class="card-img-top img-fluid" src="{{ asset('image/desain1.jpg')}}" alt="Card image cap">
 		            <div class="card-body">
 		                <h5 class="card-title" style="margin-bottom: 5px">Judul</h5><hr style="margin-bottom: 8px">
 		                <div align="right">
@@ -75,7 +75,7 @@
 		    </div>
 		    <div class="col-md-3 pl-1">
 		        <div class="card">
-		            <img class="card-img-top img-fluid" src="https://via.placeholder.com/300x200" alt="Card image cap">
+		            <img class="card-img-top img-fluid" src="{{ asset('image/desain2.jpg')}}" alt="Card image cap">
 		            <div class="card-body">
 		                <h5 class="card-title" style="margin-bottom: 5px">Judul</h5><hr style="margin-bottom: 8px">
 		                <div align="right">
@@ -93,7 +93,7 @@
 		    </div>
 		    <div class="col-md-3 pl-1">
 		        <div class="card">
-		            <img class="card-img-top img-fluid" src="https://via.placeholder.com/300x200" alt="Card image cap">
+		            <img class="card-img-top img-fluid" src="{{ asset('image/desain3.jpg')}}" alt="Card image cap">
 		            <div class="card-body">
 		                <h5 class="card-title" style="margin-bottom: 5px">Judul</h5><hr style="margin-bottom: 8px">
 		                <div align="right">
@@ -111,7 +111,7 @@
 		    </div>
 		    <div class="col-md-3 pl-1">
 		        <div class="card">
-		            <img class="card-img-top img-fluid" src="https://via.placeholder.com/300x200" alt="Card image cap">
+		            <img class="card-img-top img-fluid" src="{{ asset('image/desain4.jpg')}}" alt="Card image cap">
 		            <div class="card-body">
 		                <h5 class="card-title" style="margin-bottom: 5px">Judul</h5><hr style="margin-bottom: 8px">
 		                <div align="right">
@@ -132,7 +132,7 @@
 		<div class="row mt-2">
 		    <div class="col-md-3 pl-1">
 		        <div class="card">
-		            <img class="card-img-top img-fluid" src="https://via.placeholder.com/300x200" alt="Card image cap">
+		            <img class="card-img-top img-fluid" src="{{ asset('image/desain5.jpg')}}" alt="Card image cap">
 		            <div class="card-body">
 		                <h5 class="card-title" style="margin-bottom: 5px">Judul</h5><hr style="margin-bottom: 8px">
 		                <div align="right">
@@ -150,7 +150,7 @@
 		    </div>
 		    <div class="col-md-3 pl-1">
 		        <div class="card">
-		            <img class="card-img-top img-fluid" src="https://via.placeholder.com/300x200" alt="Card image cap">
+		            <img class="card-img-top img-fluid" src="{{ asset('image/desain6.jpg')}}" alt="Card image cap">
 		            <div class="card-body">
 		                <h5 class="card-title" style="margin-bottom: 5px">Judul</h5><hr style="margin-bottom: 8px">
 		                <div align="right">
@@ -168,7 +168,7 @@
 		    </div>
 		    <div class="col-md-3 pl-1">
 		        <div class="card">
-		            <img class="card-img-top img-fluid" src="https://via.placeholder.com/300x200" alt="Card image cap">
+		            <img class="card-img-top img-fluid" src="{{ asset('image/desain7.jpg')}}" alt="Card image cap">
 		            <div class="card-body">
 		                <h5 class="card-title" style="margin-bottom: 5px">Judul</h5><hr style="margin-bottom: 8px">
 		                <div align="right">
@@ -186,7 +186,7 @@
 		    </div>
 		    <div class="col-md-3 pl-1">
 		        <div class="card">
-		            <img class="card-img-top img-fluid" src="https://via.placeholder.com/300x200" alt="Card image cap">
+		            <img class="card-img-top img-fluid" src="{{ asset('image/desain8.jpg')}}" alt="Card image cap">
 		            <div class="card-body">
 		                <h5 class="card-title" style="margin-bottom: 5px">Judul</h5><hr style="margin-bottom: 8px">
 		                <div align="right">

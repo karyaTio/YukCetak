@@ -24,7 +24,6 @@
                         <a href="{{ url('percetakan/design/create') }}" class="btn btn-outline-primary mb-2">Tambah Job Desain</a>
                         <a class="nav-link active" id="v-pills-home-tab" data-toggle="pill" href="#v-pills-home" role="tab" aria-controls="v-pills-home" aria-selected="true">Job Aktif</a>
                         <a class="nav-link" id="v-pills-profile-tab" data-toggle="pill" href="#v-pills-profile" role="tab" aria-controls="v-pills-profile" aria-selected="false">Job Selesai</a>
-                        <a class="nav-link" id="v-pills-messages-tab" data-toggle="pill" href="#v-pills-messages" role="tab" aria-controls="v-pills-messages" aria-selected="false">Bidder</a>
                     </div>
                   </div>
                   <div class="col-9">
@@ -41,26 +40,50 @@
                                     <th scope="col">Aksi</th>
                                 </tr>
                             </thead>
-                                <tbody>
-                                  @foreach ($designjob as $index => $design)
-                                    <tr>
-                                        <th scope="row">{{ $index + 1}}</th>
-                                        <td>{{$design->title}}</td>
-                                        <td>{{$design->description}}</td>
-                                        <td>{{$design->budget}}</td>
-                                        <td>3 bid</td>
-                                        <td>
-                                          <a href="{{ url('percetakan/design/info/'.$design->id) }}" class="btn btn-info"><i class="fa fa-info"></i></a>
-                                          <a href="{{ url('percetakan/design/info/'.$design->id) }}" class="btn btn-primary"><i class="fa fa-edit"></i></a>
-                                          <a href="{{ url('percetakan/design/info/'.$design->id) }}" class="btn btn-danger"><i class="fa fa-trash"></i></a>
-                                        </td>
-                                    </tr>
-                                  @endforeach
-                                </tbody>
-                            </table>
+                            <tbody>
+                              @foreach ($designjob as $index => $design)
+                                <tr>
+                                    <th scope="row">{{ $index + 1}}</th>
+                                    <td>{{$design->title}}</td>
+                                    <td>{{$design->description}}</td>
+                                    <td>{{$design->budget}}</td>
+                                    <td>3 bid</td>
+                                    <td>
+                                      <a href="{{ url('percetakan/design/info/'.$design->id) }}" class="btn btn-info"><i class="fa fa-info"></i></a>
+                                      <a href="{{ url('percetakan/design/info/'.$design->id) }}" class="btn btn-primary"><i class="fa fa-edit"></i></a>
+                                      <a href="{{ url('percetakan/design/info/'.$design->id) }}" class="btn btn-danger"><i class="fa fa-trash"></i></a>
+                                    </td>
+                                </tr>
+                              @endforeach
+                            </tbody>
+                        </table>
                       </div>
-                      <div class="tab-pane fade" id="v-pills-profile" role="tabpanel" aria-labelledby="v-pills-profile-tab">Riwayat Pesanan</div>
-                      <div class="tab-pane fade" id="v-pills-messages" role="tabpanel" aria-labelledby="v-pills-messages-tab">Projek Desain</div>
+                      <div class="tab-pane fade" id="v-pills-profile" role="tabpanel" aria-labelledby="v-pills-profile-tab">
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th scope="col">No</th>
+                                    <th scope="col">Title</th>
+                                    <th scope="col">Description</th>
+                                    <th scope="col">Budget</th>
+                                    <th scope="col">Bidders</th>
+                                    <th scope="col">Status</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                              @foreach ($designjob as $index => $design)
+                                <tr>
+                                    <th scope="row">{{ $index + 1}}</th>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td>3 bid</td>
+                                    <td>Job telah selesai</td>
+                                </tr>
+                              @endforeach
+                            </tbody>
+                        </table>
+                      </div>
                     </div>
                   </div>
                 </div>

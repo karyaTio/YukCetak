@@ -20,7 +20,7 @@
 					@csrf
 					<div class="form-group">
 						<label>Judul</label>
-						<input type="text" class="form-control" name="title">
+						<input type="text" class="form-control" name="title" placeholder="Masukkan Judul">
 					</div>
 					<div class="form-group">
 						<label>Jelaskan kebutuhan anda secara lengkap</label>
