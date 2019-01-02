@@ -35,7 +35,7 @@
                                 <img src="https://via.placeholder.com/150x150">
                             </div>
                             <div class="col-md-7">
-                                <h3>{{$tes->name}}</h3>
+                                
                                 <p style="margin-bottom: 1px; font-style:italic;">{{$order->created_at}}</p>
                                 <p style="margin-bottom: 1px;">Total Cetak :  {{ $order->quantity }}</p>
                                 <p>{{ $order->message }}</p>

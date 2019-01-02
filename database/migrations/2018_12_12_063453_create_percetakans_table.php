@@ -19,7 +19,10 @@ class CreatePercetakansTable extends Migration
             $table->string('name');
             $table->string('password');
             $table->string('phone_number');
+            $table->string('city')->default("");
             $table->string('address');
+            $table->string('about')->default("");
+            $table->string('attachment')->default("https://via.placeholder.com/200x200");
             $table->rememberToken();
             $table->timestamps();
         });

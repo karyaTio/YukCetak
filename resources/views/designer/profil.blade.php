@@ -4,6 +4,17 @@
 	<title>Profil</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     @include('partials.import-head')
+    <style>
+    
+.grid-container {
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
+    padding: 10px;
+    column-gap: 20px;
+    grid-row-gap: 20px;
+}
+
+    </style>
 </head>
 
 <body>
@@ -49,85 +60,21 @@
             <div class="tab-content" id="v-pills-tabContent">
               <div class="tab-pane fade show active" id="v-pills-home" role="tabpanel" aria-labelledby="v-pills-home-tab">
                   <section class="container">
-                      <div class="row">
-                          <div class="col-md-3 pl-1">
-                              <div class="card">
-                                  <img class="card-img-top img-fluid" src="https://via.placeholder.com/300x200" alt="Card image cap">
-                                  <div class="card-body">
-                                      <h5 class="card-title">Judul</h5>
-                                      <a href="" class="btn btn-primary btn-block btn-sm">Detail</a>
-                                  </div>
-                              </div>
-                          </div>
-                          <div class="col-md-3 pl-1">
-                              <div class="card">
-                                  <img class="card-img-top img-fluid" src="https://via.placeholder.com/300x200" alt="Card image cap">
-                                  <div class="card-body">
-                                      <h5 class="card-title">Judul</h5>
-                                      <a href="" class="btn btn-primary btn-block btn-sm">Detail</a>
-                                  </div>
-                              </div>
-                          </div>
-                          <div class="col-md-3 pl-1">
-                              <div class="card">
-                                  <img class="card-img-top img-fluid" src="https://via.placeholder.com/300x200" alt="Card image cap">
-                                  <div class="card-body">
-                                      <h5 class="card-title">Judul</h5>
-                                      <a href="" class="btn btn-primary btn-block btn-sm">Detail</a>
-                                  </div>
-                              </div>
-                          </div>
-                          <div class="col-md-3 pl-1">
-                              <div class="card">
-                                  <img class="card-img-top img-fluid" src="https://via.placeholder.com/300x200" alt="Card image cap">
-                                  <div class="card-body">
-                                      <h5 class="card-title">Judul</h5>
-                                      <a href="" class="btn btn-primary btn-block btn-sm">Detail</a>
-                                  </div>
-                              </div>
-                          </div>
-                      </div>
-
-                      <div class="row mt-2">
-                          <div class="col-md-3 pl-1">
-                              <div class="card">
-                                  <img class="card-img-top img-fluid" src="https://via.placeholder.com/300x200" alt="Card image cap">
-                                  <div class="card-body">
-                                      <h5 class="card-title">Judul</h5>
-                                      <a href="" class="btn btn-primary btn-block btn-sm">Detail</a>
-                                  </div>
-                              </div>
-                          </div>
-                          <div class="col-md-3 pl-1">
-                              <div class="card">
-                                  <img class="card-img-top img-fluid" src="https://via.placeholder.com/300x200" alt="Card image cap">
-                                  <div class="card-body">
-                                      <h5 class="card-title">Judul</h5>
-                                      <a href="" class="btn btn-primary btn-block btn-sm">Detail</a>
-                                  </div>
-                              </div>
-                          </div>
-                          <div class="col-md-3 pl-1">
-                              <div class="card">
-                                  <img class="card-img-top img-fluid" src="https://via.placeholder.com/300x200" alt="Card image cap">
-                                  <div class="card-body">
-                                      <h5 class="card-title">Judul</h5>
-                                      <a href="" class="btn btn-primary btn-block btn-sm">Detail</a>
-                                  </div>
-                              </div>
-                          </div>
-                          <div class="col-md-3 pl-1">
-                              <div class="card">
-                                  <img class="card-img-top img-fluid" src="https://via.placeholder.com/300x200" alt="Card image cap">
-                                  <div class="card-body">
-                                      <h5 class="card-title">Judul</h5>
-                                      <a href="" class="btn btn-primary btn-block btn-sm">Detail</a>
-                                  </div>
-                              </div>
-                          </div>
-                      </div>
+                      <div class="grid-container">
+                      @foreach ($designs as $design)
+                        <div class="card">
+                            <img style="max-height:200px;" class="card-img-top img-fluid" src="{{ url('/storage/'.$design->attachment) }}" alt="Card image cap">
+                            <div class="card-body">
+                                <h5 class="card-title">{{$design->title}}</h5>
+                                <a href="" class="btn btn-primary btn-block btn-sm">Detail</a>
+                            </div>
+                        </div>                    
+                      @endforeach
+                    </div>
                   </section>
               </div>
+
+
               <div class="tab-pane fade" id="v-pills-profile" role="tabpanel" aria-labelledby="v-pills-profile-tab">Job saya</div>
               <div class="tab-pane fade" id="v-pills-messages" role="tabpanel" aria-labelledby="v-pills-messages-tab">
                 <div class="card card-default card-freelancer-dashboard">
@@ -219,37 +166,22 @@
             </button>
           </div>
           <div class="modal-body">
-            <form>
+                <form method="POST" action="{{ url('desainer/design') }}" enctype="multipart/form-data">
+                @csrf
                 <div class="form-group">
                     <label for="exampleInputEmail1">Judul Desain</label>
-                    <input class="form-control" id="id" placeholder="Judul Desain">
-                </div>
-                <div class="form-group">
-                    <label for="exampleInputEmail1">Deskripsi Ide Dari Desain</label>
-                    <textarea class="form-control" id="id" placeholder="Deskripsi Ide Dari Desain"></textarea>
-                </div>
-                <div class="form-group">
-                    <label for="exampleInputEmail1">Deskripsi Ide Dari Desain</label>
-                    <select class="form-control">
-                        <option>--Pilih Katagori--</option>
-                        <option>Kartu Nama</option>
-                        <option>Brosur</option>
-                        <option>Flyer</option>
-                        <option>Foto</option>
-                        <option>Banner</option>
-                        <option>Illustrasi</option>
-                    </select>
+                    <input class="form-control" name="title" id="id" placeholder="Judul Desain">
                 </div>
                 <div class="form-group">
                     <label for="exampleFormControlFile1">Upload file</label>
-                    <input type="file" class="form-control-file" id="exampleFormControlFile1">
+                    <input type="file" name="attachment" class="form-control-file" id="exampleFormControlFile1">
                     <small class="form-text text-muted">upload file berformat .jpeg atau .png</small>
                 </div>
-            </form>
           </div>
           <div class="modal-footer">
             <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-            <button type="button" class="btn btn-primary">Upload Portfolio</button>
+            <button type="submit" class="btn btn-primary">Upload Portfolio</button>
+            </form>
           </div>
         </div>
       </div>

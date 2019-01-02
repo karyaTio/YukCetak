@@ -20,8 +20,8 @@
                 <img class="img-fluid banner-img img-thumbnail" src="https://via.placeholder.com/200x200" alt="">
             </div>
             <div class="col-md-6">
-                <h3>Nama Percetakan</h3>
-                <p style="margin-bottom: 4px">percetakan@gmail.com</p>
+                <h3>{{$percetakan->name}}</h3>
+                <p style="margin-bottom: 4px">{{$percetakan->email}}</p>
                 <div class="star">
                     <i class="fa fa-star"></i>
                     <i class="fa fa-star"></i>
@@ -91,7 +91,7 @@
                     <div class="form-group"><label class="control-label fwsb">Nama Percetakan</label>
                       <div class="row">
                         <div class="col-sm-12">
-                          <input class="form-control input-lg mb-20" type="text" value="Limatiga Printing" name="" id="" />
+                          <input class="form-control input-lg mb-20" type="text" value="{{ $percetakan->name }}" name="" id="" />
                         </div>
                       </div>
                     </div>
@@ -99,7 +99,7 @@
                       <label class="control-label fwsb">Nomor Telepon</label>
                       <div class="row">
                         <div class="col-sm-12">
-                          <input class="form-control input-lg contact-number mb-20" placeholder="" type="text" value="087779744759" name="" id="" />
+                          <input class="form-control input-lg contact-number mb-20" placeholder="" type="text" value="{{$percetakan->phone_number}}" name="" id="" />
                         </div>
                       </div>
                     </div>
@@ -125,7 +125,7 @@
                         <label class="control-label fwsb">Alamat</label>
                         <div class="row">
                           <div class="col-sm-12 mb-20">
-                            <input class="form-control input-lg contact-number mb-20" placeholder="" type="text" value="Sukarame" name="" id="" />
+                            <input class="form-control input-lg contact-number mb-20" placeholder="" type="text" value="{{$percetakan->address}}" name="" id="" />
                           </div>
                         </div>
                       </div>
@@ -133,7 +133,7 @@
                         <label class="control-label fwsb">Tentang Percetakan</label>
                         <div class="row">
                           <div class="col-sm-12">
-                            <textarea class="form-control js-autosize bio mb-20" rows="3" name="" id="" placeholder="Tentang"></textarea>
+                            <textarea class="form-control js-autosize bio mb-20" rows="3" name="" id="" placeholder="Tentang">{{$percetakan->address}}</textarea>
                         </div>
                       </div>
                     </div>

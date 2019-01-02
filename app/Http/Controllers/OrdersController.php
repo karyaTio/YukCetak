@@ -17,19 +17,17 @@ class OrdersController extends Controller
         $percetakan = Percetakan::find($id);
         $services = $percetakan->services()->get();
 
-        $orders = [];
+        $orders = $services[0]->orders()->orderBy('id', 'desc')->get();
+        // $order2 = $services[1]->orders()->orderBy('id', 'desc')->get();
 
-        $order1 = $services[0]->orders()->orderBy('id', 'desc')->get();
-        $order2 = $services[1]->orders()->orderBy('id', 'desc')->get();
+        // $orders.put($order1);
+        // $orders.put($order2);
 
-        $orders.put($order1);
-        $orders.put($order2);
-
-        dd($orders);
+        // dd($orders);
 
         // $tes = $services[0];
 
-        // return view('orders/index')->with(compact('orders', 'tes'));
+        return view('orders/index')->with(compact('orders', 'tes'));
     }
 
     public function accept($id){

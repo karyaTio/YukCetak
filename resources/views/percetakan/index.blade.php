@@ -3,6 +3,16 @@
 <head>
 	<title>Home Percetakan</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<style>
+	
+.grid-container {
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
+    padding: 10px;
+    column-gap: 20px;
+    grid-row-gap: 20px;
+}
+</style>
 </head>
 <link rel="stylesheet" type="text/css" href="{{ asset('css/bootstrap.min.css') }}">
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -54,155 +64,27 @@
 			</div>
 		</div>
 
-		<div class="row mt-2">
-		    <div class="col-md-3 pl-1">
-		        <div class="card">
-		            <img class="card-img-top img-fluid" src="https://via.placeholder.com/300x200" alt="Card image cap">
-		            <div class="card-body">
-		                <h5 class="card-title" style="margin-bottom: 5px">Judul</h5><hr style="margin-bottom: 8px">
-		                <div align="right">
-			                <p style="margin-bottom: 2px">by : Nama Desainer</p>
-	                      	<div class="star">
-	        				    <i class="fa fa-star"></i>
-	        				    <i class="fa fa-star"></i>
-	        				    <i class="fa fa-star"></i>
-	        				    <i class="fa fa-star"></i>
-	        				    <i class="fa fa-star-half"></i>
-	        				</div>
-		                </div>
-		            </div>
-		        </div>
-		    </div>
-		    <div class="col-md-3 pl-1">
-		        <div class="card">
-		            <img class="card-img-top img-fluid" src="https://via.placeholder.com/300x200" alt="Card image cap">
-		            <div class="card-body">
-		                <h5 class="card-title" style="margin-bottom: 5px">Judul</h5><hr style="margin-bottom: 8px">
-		                <div align="right">
-			                <p style="margin-bottom: 2px">by : Nama Desainer</p>
-	                      	<div class="star">
-	        				    <i class="fa fa-star"></i>
-	        				    <i class="fa fa-star"></i>
-	        				    <i class="fa fa-star"></i>
-	        				    <i class="fa fa-star"></i>
-	        				    <i class="fa fa-star-half"></i>
-	        				</div>
-		                </div>
-		            </div>
-		        </div>
-		    </div>
-		    <div class="col-md-3 pl-1">
-		        <div class="card">
-		            <img class="card-img-top img-fluid" src="https://via.placeholder.com/300x200" alt="Card image cap">
-		            <div class="card-body">
-		                <h5 class="card-title" style="margin-bottom: 5px">Judul</h5><hr style="margin-bottom: 8px">
-		                <div align="right">
-			                <p style="margin-bottom: 2px">by : Nama Desainer</p>
-	                      	<div class="star">
-	        				    <i class="fa fa-star"></i>
-	        				    <i class="fa fa-star"></i>
-	        				    <i class="fa fa-star"></i>
-	        				    <i class="fa fa-star"></i>
-	        				    <i class="fa fa-star-half"></i>
-	        				</div>
-		                </div>
-		            </div>
-		        </div>
-		    </div>
-		    <div class="col-md-3 pl-1">
-		        <div class="card">
-		            <img class="card-img-top img-fluid" src="https://via.placeholder.com/300x200" alt="Card image cap">
-		            <div class="card-body">
-		                <h5 class="card-title" style="margin-bottom: 5px">Judul</h5><hr style="margin-bottom: 8px">
-		                <div align="right">
-			                <p style="margin-bottom: 2px">by : Nama Desainer</p>
-	                      	<div class="star">
-	        				    <i class="fa fa-star"></i>
-	        				    <i class="fa fa-star"></i>
-	        				    <i class="fa fa-star"></i>
-	        				    <i class="fa fa-star"></i>
-	        				    <i class="fa fa-star-half"></i>
-	        				</div>
-		                </div>
-		            </div>
-		        </div>
-		    </div>
+		<div class="grid-container">
+			@foreach ($designs as $design)
+			<div class="card">
+				<img class="card-img-top img-fluid" src="{{ url('/storage/'. $design->attachment) }}" alt="Card image cap">
+				<div class="card-body">
+					<h5 class="card-title" style="margin-bottom: 5px">Judul</h5><hr style="margin-bottom: 8px">
+					<div align="right">
+						<p style="margin-bottom: 2px">{{$design->title}}</p>
+						  <div class="star">
+							<i class="fa fa-star"></i>
+							<i class="fa fa-star"></i>
+							<i class="fa fa-star"></i>
+							<i class="fa fa-star"></i>
+							<i class="fa fa-star-half"></i>
+						</div>
+					</div>
+				</div>
+			</div>		
+			@endforeach
 		</div>
 
-		<div class="row mt-2">
-		    <div class="col-md-3 pl-1">
-		        <div class="card">
-		            <img class="card-img-top img-fluid" src="https://via.placeholder.com/300x200" alt="Card image cap">
-		            <div class="card-body">
-		                <h5 class="card-title" style="margin-bottom: 5px">Judul</h5><hr style="margin-bottom: 8px">
-		                <div align="right">
-			                <p style="margin-bottom: 2px">by : Nama Desainer</p>
-	                      	<div class="star">
-	        				    <i class="fa fa-star"></i>
-	        				    <i class="fa fa-star"></i>
-	        				    <i class="fa fa-star"></i>
-	        				    <i class="fa fa-star"></i>
-	        				    <i class="fa fa-star-half"></i>
-	        				</div>
-		                </div>
-		            </div>
-		        </div>
-		    </div>
-		    <div class="col-md-3 pl-1">
-		        <div class="card">
-		            <img class="card-img-top img-fluid" src="https://via.placeholder.com/300x200" alt="Card image cap">
-		            <div class="card-body">
-		                <h5 class="card-title" style="margin-bottom: 5px">Judul</h5><hr style="margin-bottom: 8px">
-		                <div align="right">
-			                <p style="margin-bottom: 2px">by : Nama Desainer</p>
-	                      	<div class="star">
-	        				    <i class="fa fa-star"></i>
-	        				    <i class="fa fa-star"></i>
-	        				    <i class="fa fa-star"></i>
-	        				    <i class="fa fa-star"></i>
-	        				    <i class="fa fa-star-half"></i>
-	        				</div>
-		                </div>
-		            </div>
-		        </div>
-		    </div>
-		    <div class="col-md-3 pl-1">
-		        <div class="card">
-		            <img class="card-img-top img-fluid" src="https://via.placeholder.com/300x200" alt="Card image cap">
-		            <div class="card-body">
-		                <h5 class="card-title" style="margin-bottom: 5px">Judul</h5><hr style="margin-bottom: 8px">
-		                <div align="right">
-			                <p style="margin-bottom: 2px">by : Nama Desainer</p>
-	                      	<div class="star">
-	        				    <i class="fa fa-star"></i>
-	        				    <i class="fa fa-star"></i>
-	        				    <i class="fa fa-star"></i>
-	        				    <i class="fa fa-star"></i>
-	        				    <i class="fa fa-star-half"></i>
-	        				</div>
-		                </div>
-		            </div>
-		        </div>
-		    </div>
-		    <div class="col-md-3 pl-1">
-		        <div class="card">
-		            <img class="card-img-top img-fluid" src="https://via.placeholder.com/300x200" alt="Card image cap">
-		            <div class="card-body">
-		                <h5 class="card-title" style="margin-bottom: 5px">Judul</h5><hr style="margin-bottom: 8px">
-		                <div align="right">
-			                <p style="margin-bottom: 2px">by : Nama Desainer</p>
-	                      	<div class="star">
-	        				    <i class="fa fa-star"></i>
-	        				    <i class="fa fa-star"></i>
-	        				    <i class="fa fa-star"></i>
-	        				    <i class="fa fa-star"></i>
-	        				    <i class="fa fa-star-half"></i>
-	        				</div>
-		                </div>
-		            </div>
-		        </div>
-		    </div>
-		</div>
 	</section>
 
 	@include('partials.footer-percetakan')

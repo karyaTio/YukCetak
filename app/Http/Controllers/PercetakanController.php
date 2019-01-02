@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Percetakan;
+use App\Design;
 
 class PercetakanController extends Controller
 {
@@ -24,7 +25,9 @@ class PercetakanController extends Controller
      */
     public function dashboard()
     {
-        return view('percetakan/index');
+        $designs = Design::all();
+
+        return view('percetakan/index')->with(compact('designs'));
     }
 
     public function profil($id){
@@ -33,7 +36,7 @@ class PercetakanController extends Controller
         
         $services = $percetakan->services()->get();
 
-        return view('percetakan/profil')->with(compact('services'));
+        return view('percetakan/profil')->with(compact('percetakan', 'services'));
     }
 
     public function show($id){
@@ -47,5 +50,23 @@ class PercetakanController extends Controller
     public function editProfil()
     {
         return view('percetakan/edit-profil');
+    }
+
+    public function update(){
+        $path = request()->file('attachment')->store('profildesigner');
+
+        $percetakan = Percetakan::find(request()->user()->id());
+
+        $percetakan->name = request()->name;
+        $percetakan->phone_number = request()->phone_number;
+        $percetakan->city = request()->city;
+        $percetakan->address = request()->address;
+        $percetakan->about = request()->about;
+        $percetakan->attachment = $path;
+
+        $percetakan->save();
+
+
+        return redirect('/percetakan/profil/' . request()->user()->id());
     }
 }

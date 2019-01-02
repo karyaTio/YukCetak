@@ -31,6 +31,8 @@ Route::prefix('/desainer')->group(function () {
     Route::get('/percetakan/{id}', 'PercetakanController@show');
     Route::get('/percetakan/services/{id}', 'ServicesController@show');
     Route::post('/percetakan/services/{id}/orders', 'OrdersDesignerController@store');
+
+    Route::post('/design', 'DesignController@create');
 });
 
 
@@ -44,6 +46,7 @@ Route::prefix('/percetakan')->group(function () {
     Route::get('/logout', 'AuthPercetakan\PercetakanLoginController@logout');
     Route::get('/profil/{id}', 'PercetakanController@profil')->name('percetakan.profil');
     Route::get('/edit-profil', 'PercetakanController@editProfil')->name('percetakan.edit-profil');
+    Route::post('/edit-profil', 'PercetakanController@update');
 
     Route::get('/services', 'ServicesController@index');
     Route::get('/services/create', 'ServicesController@create');
@@ -68,3 +71,5 @@ Route::prefix('/percetakan')->group(function () {
 });
 
 Route::get('/download/{folder}/{filename}', 'PagesController@download');
+
+Route::get('/storage/{folder}/{filename}', 'PagesController@showimage');

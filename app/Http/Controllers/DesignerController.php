@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\User;
+use App\Design;
 
 class DesignerController extends Controller
 {
@@ -20,7 +21,9 @@ class DesignerController extends Controller
     public function show($id){
         $designer = User::find($id);
 
-        return view('designer/profil')->with(compact('designer'));
+        $designs = $designer->designs()->get();
+
+        return view('designer/profil')->with(compact('designer', 'designs'));
     }
 
     public function pesananSaya()

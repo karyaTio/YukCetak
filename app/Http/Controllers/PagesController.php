@@ -4,6 +4,9 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Percetakan;
+use App\Design;
+use File;
+use Response;
 
 class PagesController extends Controller
 {
@@ -22,7 +25,9 @@ class PagesController extends Controller
     }
 
     public function homePercetakan(){
-    	return view('home-percetakan');
+        $designs = Design::all()->get();
+
+    	return view('home-percetakan')->with(compact('designs'));
     }
 
     public function designerLandingPage(){
@@ -46,5 +51,21 @@ class PagesController extends Controller
     echo "Error" . $file_path;
     }
  
+    }
+
+    public function showimage($folder, $filename){
+        $path = storage_path() . '/app/' . $folder . '/' . $filename;
+
+        if (!File::exists($path)) {
+            abort(404);
+        }
+
+        $file = File::get($path);
+        $type = File::mimeType($path);
+
+        $response = Response::make($file, 200);
+        $response->header("Content-Type", $type);
+
+        return $response;
     }
 }
